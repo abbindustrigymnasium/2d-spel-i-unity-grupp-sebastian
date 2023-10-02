@@ -1,212 +1,74 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/W0KNhDMh)
-snoppdick
+# Projekt Unity 2D Spel
 
-Projekt unity 2d spel 
+## Projektplan
 
-Projekt plan  
+### Bakgrund
+I detta projekt ska vi skapa ett Unity 2D-spel med temat tidsresor. Spelet kommer att utspela sig på olika platser och tider, där spelaren behöver samla guldmynt och lösa pussel för att rätta till felaktiga tidslinjer.
 
-Bakgrund. - vad ska vi göra 
+### Projektbeskrivning
+Spelet handlar om ett misslyckat tidsreseexperiment som hotar att förstöra rumtiden. Spelaren måste resa genom olika tider, inklusive London 1910, forntida Egypten, cyberpunk London 2147 och månlandningen 1969. Målet är att samla åtta mynt och rätta till felaktiga händelser för att rädda tid och rum.
 
-Projektbeskrivning 
+### Organisation
+Vi kommer att dela upp projektet i konkreta delar och tilldela specifika uppgifter till teammedlemmarna.
 
-Organisation 
+### Tidsplan
+Vi kommer att sätta upp både externa och interna deadlines för att säkerställa projektets framsteg och färdigställande.
 
-Tidsplan. När ska vi göra det, extrena och interna dead lines 
+### Konflikthantering och Riskanalys
+Vi kommer att diskutera potentiella konflikter och utveckla både proaktiva och reaktiva åtgärder för att hantera dessa. En riskanalys kommer att göras för att identifiera möjliga problem och hitta lösningar, som till exempel om någon blir sjuk eller om en dator kraschar.
 
-Deal upp projektet it konkrtea delar. 
+### Dokumenthantering
+Vi kommer att etablera en dokumentationsprocess för att hantera projektets dokument och information.
 
- 
+### Projektstyrning
+Vi kommer att använda både klassisk projektstyrning och agil projektstyrning för att säkerställa projektets framsteg och anpassa oss till eventuella förändringar under utvecklingen.
 
-Vad gör vi om... (om vissa konfilkter uppstär). Riskanalys. Vad gör vi om någon blir sjuk, vad gör vi om nåns dator krashar.diskutera proaktiva och reaktiva åtgärder. 
+## Spelidé och Mekanik
 
- 
+### Plattform
+Spelet kommer att vara en 2D-plattform där spelaren kan förflytta sig i tiden och utforska olika historiska platser.
 
-Dokment hantering, hur sköts dokumentation. 
+### Lore
+Spelets berättelse involverar ett misslyckat tidsreseexperiment som har skapat kaos i tidslinjen. Spelaren måste återhämta felplacerade mynt för att rädda tid och rum från att kollapsa.
 
- 
+### Cutscene
+Spelet börjar med en filmsekvens på laboratoriet där spelaren informeras om situationen och uppmanas att återta de felaktigt placerade mynten för att rädda tid och rum.
 
-Klassisk pr 
+### Mekanik
+- **Rörelse:** Spelaren kan gå med A/D eller piltangenterna, hoppa med uppåtpilen, space eller W, krypa (låg prioritet), glida med Ctrl.
+- **Checkpoints:** Spelaren måste passera checkpoints för att spara framsteg.
+- **Spara spelet:** Spelet kommer att sparas vid checkpoints.
+- **Mål:** Samla åtta mynt för att vinna spelet.
+- **Tidsperioder:** Spelet kommer att ha fyra tidsperioder: 1910 (start), forntida Egypten, cyberpunk London 2147 och månlandningen 1969.
+- **Powerups:** Spelaren kan låsa upp och använda olika powerups som minskad gravitation (månlandning), ökad hastighet (cyberpunk), förmågan att flyga (1910) och andra förmågor som förbättrar eller ändrar spelaren.
 
-ojekt styrning och agil projekt styrning. 
 
- 
 
- 
+### Meny
+- **Fortsätt:** Fortsätt från senast sparade checkpoint.
+- **Inställningar:** Justera spelets ljud och grafik.
+- **Kontroller:** Ändra tangentbordsbindningar.
+- **Avsluta spelet:** Stäng av spelet.
 
- 
+### Grafik och Animation
+- **Spelare:** Skapa en karaktär som kan röra sig och utföra olika åtgärder.
+- **NPCs:** Skapa olika karaktärer från olika tidsperioder som spelaren kan interagera med.
+- **Miljö:** Designa byggnader, bakgrundsbilder och landskap för varje tidsperiod.
+- **Animation:** Animerad rörelse för karaktärer, objekt och miljöer för att göra spelet levande och engagerande.
+- **Progressbar**, visa vilkamynt somsalmats, **gul för samlade**
 
- 
+### Ljud
+- **Musik**, tracks för varje level
+- **SFX**, olika dödsljud, hopp ljud, spring ljud, slide ljud
+- **Ambient noice**, blåst
+  
 
- 
+## Minimum Viable Product (MVP)
+- **Spelbar karaktär:** Skapa en spelbar karaktär med grundläggande rörelse och interaktionsförmåga.
+- **Plattform och hinder:** Skapa grundläggande plattformar och hinder som spelaren kan interagera med.
+- **Grafik och design:** Skapa grundläggande grafik och design för spelarens karaktär, NPC:er, miljö och meny.
+- **Mekanik:** Implementera grundläggande spelmekanik inklusive rörelse, hopp och insamling av mynt.
+- **Sparnings- och laddningssystem:** Implementera ett system för att spara och ladda spelprogress.
+- **Meny och kontroller:** Skapa en enkel meny där spelaren kan starta, fortsätta, justera inställningar och avsluta spelet.
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-Platformer. 
-
-Plats, London 1910, olika tider 
-
-Vi förflyttar os i tiden 
-
-Coleccta guldmynt 
-
-Wormholes 
-
-Powerups, betträ jump 
-
-Pussel. 
-
- 
-
- 
-
-Lore: time travel expriment gone wrong.  
-
-Cutscene Starting at the labratory, you need to retreve the  coins since  they are at the wrong time .otherwise space time continueinm   will die! 
-
- 
-
- 
-
-Saker att göra: 
-
-Mechanics. 
-
-Movement 
-
-Gå, A/D arrow keys 
-
-Hoppa (arr up, space, w) 
-
-Crouch (låg prio) 
-
-Slide (Ctrl) 
-
-Checkpoints 
-
-Paper boy 
-
-Spara spelet 
-
-Collect 8 coins to win 
-
-1910 coins 
-
-Egyptian cons	 
-
-Wormwhole (finish line) 
-
-Mini level bwtween levels (increasingly harder) - låg prio 
-
-4 tider  
-
-1910 (start),  (Level är i flera delar, kan inte ramla ner. 
-
-2523 Bc egypt, pryamiderna byggs (utanför och innuty en pyramid) 
-
-Cyberpunk london 2147, (tak kan ramla ner) 
-
-Moon ladning (on the moon), första 1969 
-
-Powerups, cooldown. (unlock the powerups), popup, you unlocked powerup, use  number tnagenter för att använda power upps. (Minecraft menu) 
-
-Less gravity (moon landing) - moon rock 
-
-Speed, Superdrugs (Cyberpunk) 
-
-Farow curse (enhance one skill, remove another) - Egypt 
-
-Flying for a short time (1910) 
-
-Turorial 
-
-1910 
-
-Lore 
-
-Controlls, play the game	 
-
-Dö 
-
-Fall damage 
-
-Krossad  
-
-Astroid 
-
- 
-
-Menu. 
-
-Continue 
-
-Settings 
-
-Controlls - keybinding 
-
-Quit game 
-
-Scetcher 
-
-Sprites 
-
-Player 
-
-NPCs från olika tidre 
-
-Monen: månlandare , aliens,  
-
- 
-
-Byggnader 
-
-Pyramis 
-
-Bakgrundsbilder 
-
-Sand 
-
-Moon 
-
-Cyperpunk background 
-
-Mimimal viable prduct 
-
-gugge som hoppar runt 
-
-Kamera som följer 
-
- 
-
-Animation 
-
- 
-
- 
-
-Minimum viable product. 
-
- 
+Detta är en översikt över vårt Unity 2D-spelprojekt. Vi kommer att arbeta tillsammans för att genomföra detta projekt och skapa en rolig och engagerande spelupplevelse för spelarna.
