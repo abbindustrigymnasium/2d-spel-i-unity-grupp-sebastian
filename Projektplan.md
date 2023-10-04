@@ -1,6 +1,4 @@
-# Projekt Unity 2D Spel
-
-## Projektplan
+# Projektplan
 
 ## Vad ska vi göra? 
    ### Bakgrund
