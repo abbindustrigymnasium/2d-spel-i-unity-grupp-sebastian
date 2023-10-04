@@ -58,8 +58,8 @@ Through these tests and tools, we prioritize making our website inclusive and us
 
 This project will no longer be maindtained when this repository goas public; due to the fact that we have already pressented our project for our school. But if you have ideas for new sausage features, interesting sausage facts, or delicious sausage recipes to share, please feel free to contribute. **Follow these steps:**
 
-1. Fork the repository at [Användar Gränssnitt ux](https://github.com/abbindustrigymnasium/anv-ndargr-nssnitt-ux-bg1a)
-2. Create a new branch for your sausage-inspired work.
+1. Fork the repository
+2. Create a new branch.
 3. Make your changes and commit them with clear commit messages.
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
