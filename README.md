@@ -1,4 +1,4 @@
-# Projekt Unity 2D Spe
+# Projekt Unity 2D Spel
 
 
 ## Table of Contents
