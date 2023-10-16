@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,19 +15,20 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private bool isFacingRight = true;
-
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
         if (!isFacingRight && horizontal > 0f)
         {
             Flip();
@@ -57,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
+        animator.SetBool("isJumping",isGrounded());
         if (context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
