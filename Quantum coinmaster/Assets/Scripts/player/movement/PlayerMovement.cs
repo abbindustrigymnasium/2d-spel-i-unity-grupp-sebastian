@@ -9,11 +9,18 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public bool isSliding = false;
+
     public float speed = 8f;
     public float jumpingPower = 16f;
 
+    public float slideSpeed = 6f;
+
     private float horizontal;
     private bool isFacingRight = true;
+
+    public BoxCollider2D regularColl;
+    public BoxCollider2D slideColl;
 
 
     // Start is called before the first frame update
@@ -69,10 +76,38 @@ public class PlayerMovement : MonoBehaviour
 
     public void Slide(InputAction.CallbackContext context)
     {
-        if (isGrounded())
+        performSlide();
+    }
+
+    private void performSlide()
+    {
+        isSliding = true;
+
+        regularColl.enabled = false;
+        slideColl.enabled = true;
+
+        if (isFacingRight == true)
         {
-            Debug.Log("Hello!! Pressed shift");
-            //Add slide thing here!
+            rb.AddForce(Vector2.right * slideSpeed);
         }
+        else if (isFacingRight == false)
+        {
+            rb.AddForce(Vector2.right * slideSpeed * -1f);
+        }
+
+
+
+        StartCoroutine("stopSlide");
+    }
+
+    IEnumerator stopSlide()
+    {
+        yield return new WaitForSeconds(0.8f);
+
+        regularColl.enabled = true;
+        slideColl.enabled = false;
+
+        isSliding = false;
+
     }
 }
