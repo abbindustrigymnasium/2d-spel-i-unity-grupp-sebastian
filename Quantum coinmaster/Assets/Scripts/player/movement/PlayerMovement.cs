@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
     }
 
     private void Flip()
@@ -64,6 +64,15 @@ public class PlayerMovement : MonoBehaviour
         if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+    }
+
+    public void Slide(InputAction.CallbackContext context)
+    {
+        if (isGrounded())
+        {
+            Debug.Log("Hello!! Pressed shift");
+            //Add slide thing here!
         }
     }
 }
