@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        animator.SetBool("isJumping",isGrounded());
+        animator.SetBool("isJumping",true);
         if (context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
