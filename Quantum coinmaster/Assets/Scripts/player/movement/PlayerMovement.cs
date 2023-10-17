@@ -9,12 +9,15 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public Transform cellingCheck;
+
     public bool isSliding = false;
 
     public float speed = 8f;
     public float jumpingPower = 16f;
 
-    public float slideSpeed = 6f;
+    public float slideSpeed = 2f;
+    private float noSlide = 1f;
 
     private float horizontal;
     private bool isFacingRight = true;
@@ -32,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * speed * noSlide, rb.velocity.y);
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -46,7 +49,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
+    }
+
+    private bool isCelling()
+    {
+        return Physics2D.OverlapCircle(cellingCheck.position, 1f, groundLayer);
     }
 
     private void Flip()
@@ -76,7 +84,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Slide(InputAction.CallbackContext context)
     {
-        performSlide();
+        if (context.performed)
+        {
+            performSlide();
+        }
     }
 
     private void performSlide()
@@ -86,16 +97,7 @@ public class PlayerMovement : MonoBehaviour
         regularColl.enabled = false;
         slideColl.enabled = true;
 
-        if (isFacingRight == true)
-        {
-            rb.AddForce(Vector2.right * slideSpeed);
-        }
-        else if (isFacingRight == false)
-        {
-            rb.AddForce(Vector2.right * slideSpeed * -1f);
-        }
-
-
+        noSlide = slideSpeed;
 
         StartCoroutine("stopSlide");
     }
@@ -103,11 +105,20 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.8f);
+        if (isCelling())
+        {
+            performSlide();
+        }
+        else
+        {
+            noSlide = 1f;
+            Debug.Log("Hello Test");
+            regularColl.enabled = true;
+            slideColl.enabled = false;
 
-        regularColl.enabled = true;
-        slideColl.enabled = false;
+            isSliding = false;
+        }
 
-        isSliding = false;
 
     }
 }

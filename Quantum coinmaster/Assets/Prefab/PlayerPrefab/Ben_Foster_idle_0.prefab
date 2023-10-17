@@ -67,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3803328229205939496}
+  - {fileID: 3582917689846950111}
   - {fileID: 7164827089818490017}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -154,7 +155,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004923314, y: 0.047337063}
+  m_Offset: {x: -0.0043300465, y: 0.047337055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21291506, y: 0.5053259}
+  m_Size: {x: 0.17613326, y: 0.5053259}
   m_EdgeRadius: 0
 --- !u!50 &3093905190647170781
 Rigidbody2D:
@@ -329,10 +330,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  isSliding: 0
+  cellingCheck: {fileID: 3582917689846950111}
+  isSliding: 1
   speed: 8
   jumpingPower: 10
-  slideSpeed: 5000
+  slideSpeed: 2
   regularColl: {fileID: 3128472869055674017}
   slideColl: {fileID: 4332458797399901766}
 --- !u!58 &410506693557298696
@@ -367,9 +369,40 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0046863793, y: -0.17599677}
+  m_Offset: {x: -0.004, y: -0.19}
   serializedVersion: 2
-  m_Radius: 0.10265396
+  m_Radius: 0.09
+--- !u!1 &4071125046391519043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3582917689846950111}
+  m_Layer: 0
+  m_Name: cellingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3582917689846950111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071125046391519043}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.005, y: 0.27, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7305865607634139283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7041770133246193759
 GameObject:
   m_ObjectHideFlags: 0
