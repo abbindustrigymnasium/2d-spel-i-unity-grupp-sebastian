@@ -12,12 +12,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform cellingCheck;
 
     public bool isSliding = false;
+    public bool canWalk = true;
 
     public float speed = 8f;
     public float jumpingPower = 16f;
 
     public float slideSpeed = 2f;
-    private float noSlide = 1f;
+    private float originalSlideSpeed;
 
     private float horizontal;
     private bool isFacingRight = true;
@@ -29,21 +30,34 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        originalSlideSpeed = slideSpeed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed * noSlide, rb.velocity.y);
+        if (canWalk == true)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        else if (canWalk == false && isSliding == true)
+        {
+            rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
+        }
 
         if (!isFacingRight && horizontal > 0f)
         {
-            Flip();
+            if (canWalk)
+            {
+                Flip();
+            }
         }
         else if (isFacingRight && horizontal < 0f)
         {
-            Flip();
+            if (canWalk)
+            {
+                Flip();
+            }
         }
     }
 
@@ -92,12 +106,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void performSlide()
     {
+        canWalk = false;
         isSliding = true;
+
+        if (originalSlideSpeed == slideSpeed)
+        {
+            if (isFacingRight != true)
+            {
+                slideSpeed *= -1;
+            }
+        }
+
 
         regularColl.enabled = false;
         slideColl.enabled = true;
-
-        noSlide = slideSpeed;
 
         StartCoroutine("stopSlide");
     }
@@ -105,19 +127,20 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.8f);
-        if (isCelling())
-        {
-            performSlide();
-        }
-        else
-        {
-            noSlide = 1f;
-            Debug.Log("Hello Test");
-            regularColl.enabled = true;
-            slideColl.enabled = false;
 
-            isSliding = false;
+        while (isCelling())
+        {
+            yield return new WaitForSeconds(0.2f);
         }
+
+        Debug.Log("Hello Test");
+        regularColl.enabled = true;
+        slideColl.enabled = false;
+
+        isSliding = false;
+        canWalk = true;
+        slideSpeed = originalSlideSpeed;
+
 
 
     }
