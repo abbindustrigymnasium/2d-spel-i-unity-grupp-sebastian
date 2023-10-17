@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isSliding = false;
     public bool canWalk = true;
+    public bool canJump = true;
 
     public float speed = 8f;
     public float jumpingPower = 16f;
@@ -86,13 +87,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded())
+        if (canJump == true)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            if (context.performed && isGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            }
+            if (context.canceled && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
         }
     }
 
@@ -107,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
     private void performSlide()
     {
         canWalk = false;
+        canJump = false;
         isSliding = true;
 
         if (originalSlideSpeed == slideSpeed)
@@ -139,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
         isSliding = false;
         canWalk = true;
+        canJump = true;
         slideSpeed = originalSlideSpeed;
 
 
