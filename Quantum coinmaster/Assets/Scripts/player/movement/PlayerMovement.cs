@@ -26,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     Animator animator;
 
-    public BoxCollider2D regularColl;
-    public BoxCollider2D slideColl;
+    public CapsuleCollider2D regularColl;
+    public CapsuleCollider2D slideColl;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        isSliding = false;
         animator = GetComponent<Animator>();
         originalSlideSpeed = slideSpeed;
     }
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
+        animator.SetBool("isSliding",isSliding);
         if (canWalk == true)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
         }
 
-        if (isGrounded() == false)
+        if (!isGrounded()&& !isSliding)
         {
             animator.SetBool("isJumping", true);
         }
@@ -119,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
+            animator.SetBool("isJumping",false);
             performSlide();
         }
     }
@@ -147,13 +150,10 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.8f);
-
         while (isCelling())
         {
             yield return new WaitForSeconds(0.2f);
         }
-
-        Debug.Log("Hello Test");
         regularColl.enabled = true;
         slideColl.enabled = false;
 
