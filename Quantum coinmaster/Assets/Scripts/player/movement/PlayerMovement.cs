@@ -61,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
         else {
             animator.SetBool("isJumping",false);
         }
-        Debug.Log(transform.position.y);
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -150,13 +149,10 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.8f);
-        Debug.Log("CealingHallo!!");
         while (isCelling())
         {
             yield return new WaitForSeconds(0.2f);
         }
-
-        Debug.Log("Hello Test");
         regularColl.enabled = true;
         slideColl.enabled = false;
 
