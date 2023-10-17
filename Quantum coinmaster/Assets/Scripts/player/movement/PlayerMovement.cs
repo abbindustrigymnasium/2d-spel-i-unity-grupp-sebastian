@@ -52,6 +52,15 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
         }
 
+        if (isGrounded() == false)
+        {
+            animator.SetBool("isJumping",true);
+        }
+        else {
+            animator.SetBool("isJumping",false);
+        }
+        Debug.Log(transform.position.y);
+
         if (!isFacingRight && horizontal > 0f)
         {
             if (canWalk)
@@ -93,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        animator.SetBool("isJumping",true);
         if (canJump == true)
         {
             if (context.performed && isGrounded())
