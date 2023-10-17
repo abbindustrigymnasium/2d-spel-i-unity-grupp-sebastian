@@ -54,12 +54,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded() == false)
         {
-            animator.SetBool("isJumping",true);
+            animator.SetBool("isJumping", true);
         }
-        else {
-            animator.SetBool("isJumping",false);
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
-        Debug.Log(transform.position.y);
 
         if (!isFacingRight && horizontal > 0f)
         {
