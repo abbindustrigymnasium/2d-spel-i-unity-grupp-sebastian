@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1015066671188719411}
   - component: {fileID: 410506693557298696}
   - component: {fileID: -5859886204373733447}
+  - component: {fileID: 8129192635532873031}
   m_Layer: 0
   m_Name: Ben_Foster_idle_0
   m_TagString: Player
@@ -396,6 +397,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8129192635532873031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409722532995306826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fa5b4d946e21d40bcd1bc2185ff6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4071125046391519043
 GameObject:
   m_ObjectHideFlags: 0
