@@ -3,7 +3,7 @@ using UnityEngine;
 public class ExampleClass : MonoBehaviour
 {
     //movement speed in units per second
-    private float movementSpeed = 5f;
+    public float movementSpeed = 5f;
 
     void Update()
     {
