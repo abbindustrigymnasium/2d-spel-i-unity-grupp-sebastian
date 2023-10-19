@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    public float test = 8;
     public Transform groundCheck;
     public LayerMask groundLayer;
 
