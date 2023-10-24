@@ -41,13 +41,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(rb.bodyType == RigidbodyType2D.Static){ // används för att reseta animationerna vid spelardöd
+        if (rb.bodyType == RigidbodyType2D.Static)
+        { // används för att reseta animationerna vid spelardöd
             animator.SetBool("isSliding", false);
             animator.SetBool("isJumping", false);
             animator.SetFloat("xVelocity", 0);
             animator.SetFloat("yVelocity", 0);
-        }else { // om dynamisk rigidbody -> spelare lever
-            animator.SetBool("isSliding",isSliding);
+        }
+        else
+        { // om dynamisk rigidbody -> spelare lever
+            animator.SetBool("isSliding", isSliding);
             animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
             animator.SetFloat("yVelocity", rb.velocity.y);
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -56,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
             }
 
-            if (!isGrounded()&& !isSliding)
+            if (!isGrounded() && !isSliding)
             {
                 animator.SetBool("isJumping", true);
             }
@@ -123,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            animator.SetBool("isJumping",false);
+            animator.SetBool("isJumping", false);
             performSlide();
         }
     }
