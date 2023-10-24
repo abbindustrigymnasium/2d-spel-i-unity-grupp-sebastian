@@ -26,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     Animator animator;
 
-    public BoxCollider2D regularColl;
-    public BoxCollider2D slideColl;
+    public CapsuleCollider2D regularColl;
+    public CapsuleCollider2D slideColl;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        isSliding = false;
         animator = GetComponent<Animator>();
         originalSlideSpeed = slideSpeed;
     }
@@ -40,39 +41,43 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
-        if (canWalk == true)
-        {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        }
-        else if (canWalk == false && isSliding == true)
-        {
-            rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
-        }
-
-        if (isGrounded() == false)
-        {
-            animator.SetBool("isJumping", true);
-        }
-        else
-        {
+        if(rb.bodyType == RigidbodyType2D.Static){ // används för att reseta animationerna vid spelardöd
+            animator.SetBool("isSliding", false);
             animator.SetBool("isJumping", false);
-        }
-
-        if (!isFacingRight && horizontal > 0f)
-        {
-            if (canWalk)
+            animator.SetFloat("xVelocity", 0);
+            animator.SetFloat("yVelocity", 0);
+        }else { // om dynamisk rigidbody -> spelare lever
+            animator.SetBool("isSliding",isSliding);
+            animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            animator.SetFloat("yVelocity", rb.velocity.y);
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            if (isSliding == true)
             {
-                Flip();
+                rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
             }
-        }
-        else if (isFacingRight && horizontal < 0f)
-        {
-            if (canWalk)
+
+            if (!isGrounded()&& !isSliding)
             {
-                Flip();
+                animator.SetBool("isJumping", true);
+            }
+            else
+            {
+                animator.SetBool("isJumping", false);
+            }
+
+            if (!isFacingRight && horizontal > 0f)
+            {
+                if (canWalk)
+                {
+                    Flip();
+                }
+            }
+            else if (isFacingRight && horizontal < 0f)
+            {
+                if (canWalk)
+                {
+                    Flip();
+                }
             }
         }
     }
@@ -94,7 +99,6 @@ public class PlayerMovement : MonoBehaviour
         localScale.x *= -1f;
         transform.localScale = localScale;
     }
-
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
@@ -119,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
+            animator.SetBool("isJumping",false);
             performSlide();
         }
     }
@@ -147,13 +152,10 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator stopSlide()
     {
         yield return new WaitForSeconds(0.8f);
-
         while (isCelling())
         {
             yield return new WaitForSeconds(0.2f);
         }
-
-        Debug.Log("Hello Test");
         regularColl.enabled = true;
         slideColl.enabled = false;
 
@@ -161,8 +163,5 @@ public class PlayerMovement : MonoBehaviour
         canWalk = true;
         canJump = true;
         slideSpeed = originalSlideSpeed;
-
-
-
     }
 }
