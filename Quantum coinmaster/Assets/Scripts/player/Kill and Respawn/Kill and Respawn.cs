@@ -6,25 +6,20 @@ using UnityEngine.SceneManagement;
 public class KillandRespawn : MonoBehaviour
 {
     public Rigidbody2D rb;
-    //private Animator anim;
-
-
+    private Animator anim;
+    private PlayerMovement playerMovement;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // anim = getComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("trap"))
         {
-            Debug.Log("Hello");
             Die();
-
-            //Remove this part once animation is here!!
-            RestartLevel();
         }
 
     }
@@ -32,7 +27,7 @@ public class KillandRespawn : MonoBehaviour
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;
-        //anim.SetTrigger("death");
+        anim.SetTrigger("death");
     }
 
     private void RestartLevel()
