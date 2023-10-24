@@ -26,7 +26,6 @@ public class test : MonoBehaviour
         transform.Rotate(0, 2, 0);
 
         //output to log the position change
-        Debug.Log(positionY);
-        Debug.Log(testValue);
+
     }
 }
