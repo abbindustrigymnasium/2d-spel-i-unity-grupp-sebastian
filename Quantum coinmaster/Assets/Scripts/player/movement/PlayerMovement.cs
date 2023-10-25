@@ -43,40 +43,43 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
-        animator.SetBool("isSliding",isSliding);
-        if (canWalk == true)
-        {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        }
-        else if (canWalk == false && isSliding == true)
-        {
-            rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
-        }
-
-        if (!isGrounded()&& !isSliding)
-        {
-            animator.SetBool("isJumping", true);
-        }
-        else
-        {
+        if(rb.bodyType == RigidbodyType2D.Static){ // används för att reseta animationerna vid spelardöd
+            animator.SetBool("isSliding", false);
             animator.SetBool("isJumping", false);
-        }
-
-        if (!isFacingRight && horizontal > 0f)
-        {
-            if (canWalk)
+            animator.SetFloat("xVelocity", 0);
+            animator.SetFloat("yVelocity", 0);
+        }else { // om dynamisk rigidbody -> spelare lever
+            animator.SetBool("isSliding",isSliding);
+            animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            animator.SetFloat("yVelocity", rb.velocity.y);
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            if (isSliding == true)
             {
-                Flip();
+                rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
             }
-        }
-        else if (isFacingRight && horizontal < 0f)
-        {
-            if (canWalk)
+
+            if (!isGrounded()&& !isSliding)
             {
-                Flip();
+                animator.SetBool("isJumping", true);
+            }
+            else
+            {
+                animator.SetBool("isJumping", false);
+            }
+
+            if (!isFacingRight && horizontal > 0f)
+            {
+                if (canWalk)
+                {
+                    Flip();
+                }
+            }
+            else if (isFacingRight && horizontal < 0f)
+            {
+                if (canWalk)
+                {
+                    Flip();
+                }
             }
         }
     }
@@ -98,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         localScale.x *= -1f;
         transform.localScale = localScale;
     }
-
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
@@ -163,8 +165,5 @@ public class PlayerMovement : MonoBehaviour
         canWalk = true;
         canJump = true;
         slideSpeed = originalSlideSpeed;
-
-
-
     }
 }
