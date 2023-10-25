@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -107.36606
+      value: -107.580894
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8459,7 +8459,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3750314262162950095, guid: e1d7660d09f32194dac381b5c72681cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -103.03613
+      value: -98.45
       objectReference: {fileID: 0}
     - target: {fileID: 3750314262162950095, guid: e1d7660d09f32194dac381b5c72681cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8516,7 +8516,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -107.36606
+      value: -107.580894
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8723,7 +8723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3750314262162950095, guid: e1d7660d09f32194dac381b5c72681cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -107.04
+      value: -93.86
       objectReference: {fileID: 0}
     - target: {fileID: 3750314262162950095, guid: e1d7660d09f32194dac381b5c72681cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8778,14 +8778,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1015066671188719411, guid: 0644f96a4ab514d41a5d1cac127b32a0, type: 3}
-      propertyPath: jumpingPower
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409722532995306826, guid: 0644f96a4ab514d41a5d1cac127b32a0, type: 3}
-      propertyPath: m_Name
-      value: Ben_Foster_idle_0
-      objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -107.8
@@ -8825,6 +8817,14 @@ PrefabInstance:
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015066671188719411, guid: 0644f96a4ab514d41a5d1cac127b32a0, type: 3}
+      propertyPath: jumpingPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409722532995306826, guid: 0644f96a4ab514d41a5d1cac127b32a0, type: 3}
+      propertyPath: m_Name
+      value: Ben_Foster_idle_0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8987,3 +8987,5 @@ SceneRoots:
   - {fileID: 540229551}
   - {fileID: 108649717}
   - {fileID: 519791094}
+  - {fileID: 73732028}
+  - {fileID: 1423113096}
