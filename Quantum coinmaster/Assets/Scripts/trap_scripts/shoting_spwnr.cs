@@ -11,12 +11,12 @@ public class shoting_spwnr : MonoBehaviour
 
     public float random = 1;
 
-    public range = 100;
-    private pos = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        pos = transform.position.x;
+
     }
 
     // Update is called once per frame
@@ -32,10 +32,6 @@ public class shoting_spwnr : MonoBehaviour
             Instantiate(laser, transform.position, transform.rotation);
             timer = 0 + Random.Range(-random, random);
 
-        }
-        if (transform.position.x > pos + range)
-        {
-            Destroy(laser);
         }
     }
 }
