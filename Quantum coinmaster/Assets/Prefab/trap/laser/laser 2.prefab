@@ -146,3 +146,9 @@ MonoBehaviour:
   laser: {fileID: 1191223649302874707}
   laserSpawner: {fileID: 980328868101396488, guid: 0e8b066de34ac934b85ac717ef7f9480, type: 3}
   speed: -0.2
+  groundCheck: {fileID: 1191223649302874707}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 32
+  timeGoal: 10
+  currentTime: 0

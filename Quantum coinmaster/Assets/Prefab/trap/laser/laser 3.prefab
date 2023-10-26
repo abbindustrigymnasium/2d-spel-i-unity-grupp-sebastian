@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1191223649302874707}
   - component: {fileID: 267356275649925243}
   - component: {fileID: 7949144625351850976}
-  - component: {fileID: 3705717074428645909}
+  - component: {fileID: 1263493641256691402}
   m_Layer: 0
-  m_Name: laser
+  m_Name: laser 3
   m_TagString: trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153180714392476186}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.238, y: 0.004, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.38852143, y: 0.06869005}
   m_EdgeRadius: 0
---- !u!114 &3705717074428645909
+--- !u!114 &1263493641256691402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +140,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 153180714392476186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ec8dff2fb4cab4b812e3592e9ca0e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1191794df94620a49b005214c0cf27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1191223649302874707}
-  laserSpawner: {fileID: 980328868101396488, guid: 0e8b066de34ac934b85ac717ef7f9480, type: 3}
+  laserSpawner: {fileID: 4522741712281955050, guid: 79d1e72950638c448adb6f095359dc9b, type: 3}
   speed: 0.2
   groundCheck: {fileID: 1191223649302874707}
   groundLayer:
@@ -152,3 +152,4 @@ MonoBehaviour:
     m_Bits: 256
   timeGoal: 10
   currentTime: 0
+  isGroundedFlag: 0

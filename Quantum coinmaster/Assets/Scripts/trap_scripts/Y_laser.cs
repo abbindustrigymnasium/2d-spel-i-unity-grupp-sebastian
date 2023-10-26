@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoting_laser : MonoBehaviour
+public class Y_laser : MonoBehaviour
 {
     public Transform laser;
     public Transform laserSpawner;
@@ -14,10 +14,13 @@ public class Shoting_laser : MonoBehaviour
     public float timeGoal = 100;
     public float currentTime = 0;
 
+    // Rename the member variable to avoid naming conflict
+    public bool isGroundedFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        if (laserSpawner.localScale.x < 0)
+        if (laserSpawner.localScale.y < 0)
         {
             speed = speed * -1;
         }
@@ -27,12 +30,11 @@ public class Shoting_laser : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 targetPosition = laser.position;
-        targetPosition = new Vector3(laser.position.x - speed, laser.position.y, laser.position.z);
+        targetPosition = new Vector3(laser.position.x, laser.position.y - speed, laser.position.z);
         laser.position = targetPosition;
         currentTime = currentTime + Time.deltaTime;
 
-
-        if (isGrounded() == true)
+        if (isGroundedFlag) // Use the renamed member variable
         {
             Destroy(gameObject);
         }
@@ -41,6 +43,7 @@ public class Shoting_laser : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
