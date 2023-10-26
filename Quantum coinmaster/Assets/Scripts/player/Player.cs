@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadPlayer();
+
     }
 
     public void SavePlayer() {
@@ -29,6 +29,11 @@ public class Player : MonoBehaviour
     public void LoadPlayer() {
         Car data = Saves.LoadFile();
         transform.position = new Vector3(data.startingPosX, transform.position.y, 0);
+    }
+
+    public void CollectCoin() {
+        Coins =+ 1;
+        
     }
 
     // Update is called once per frame

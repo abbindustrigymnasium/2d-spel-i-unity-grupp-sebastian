@@ -1,10 +1,11 @@
 using UnityEngine;
 using System;
 
-public class test : MonoBehaviour
+public class CoinMovement : MonoBehaviour
 {
     //movement speed in units per second
-    private float movementSpeed = 5f;
+
+    public bool dynamicYPos = true;
     private float testValue = 0f;
 
     void start() {
@@ -21,7 +22,10 @@ public class test : MonoBehaviour
 
 
         //update the position
-        transform.position = new Vector3(transform.position.x, positionY, 0);
+        if (dynamicYPos) {
+            transform.position = new Vector3(transform.position.x, positionY, 0);
+        }
+
 
         transform.Rotate(0, 2, 0);
 
