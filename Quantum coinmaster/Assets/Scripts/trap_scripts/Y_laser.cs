@@ -14,8 +14,7 @@ public class Y_laser : MonoBehaviour
     public float timeGoal = 100;
     public float currentTime = 0;
 
-    // Rename the member variable to avoid naming conflict
-    public bool isGroundedFlag = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +33,7 @@ public class Y_laser : MonoBehaviour
         laser.position = targetPosition;
         currentTime = currentTime + Time.deltaTime;
 
-        if (isGroundedFlag) // Use the renamed member variable
+        if (isGrounded() == true)
         {
             Destroy(gameObject);
         }
