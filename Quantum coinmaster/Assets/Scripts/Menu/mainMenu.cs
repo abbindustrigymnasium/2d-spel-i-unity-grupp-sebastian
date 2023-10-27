@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
+    public Player player;
+
     void start()
     {
 
@@ -15,7 +17,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        player.LoadPlayer();
     }
     public void mainMenu()
     {
@@ -33,6 +35,5 @@ public class Menu : MonoBehaviour
         {
             PlayGame();
         }
-        Time.timeScale = 0;
     }
 }

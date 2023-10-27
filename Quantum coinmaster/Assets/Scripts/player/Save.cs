@@ -7,6 +7,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
+
 [System.Serializable]
 public class Car
 {
@@ -15,9 +16,9 @@ public class Car
 
     public int coins = 0;
 
-    public int level = 0;
+    public string level = "";
 }
-public class Saves : MonoBehaviour
+public class Save : MonoBehaviour
 {
 
 
