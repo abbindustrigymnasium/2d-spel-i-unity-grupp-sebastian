@@ -6,6 +6,7 @@ using System.Threading;
 
 public class KillandRespawn : MonoBehaviour
 {
+    //public PlayerMovement playerMovement;
     public Rigidbody2D rb;
     private Animator anim;
     private PlayerMovement playerMovement;
@@ -41,6 +42,7 @@ public class KillandRespawn : MonoBehaviour
 
     private void Die()
     {
+
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
 

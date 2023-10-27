@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
+  - trap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - grid
   - Water
   - UI
   - 
