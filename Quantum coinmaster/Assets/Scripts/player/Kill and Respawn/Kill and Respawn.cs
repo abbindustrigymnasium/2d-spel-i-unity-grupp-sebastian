@@ -44,14 +44,16 @@ public class KillandRespawn : MonoBehaviour
     {
 
         rb.bodyType = RigidbodyType2D.Static;
+        
         anim.SetTrigger("death");
 
     }
 
     private void RestartLevel()
     {
-        gameManager.pauseGame();
         objectToActivate.SetActive(true);
+        //gameManager.pauseGame();
+        
         Debug.Log("Dead");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
