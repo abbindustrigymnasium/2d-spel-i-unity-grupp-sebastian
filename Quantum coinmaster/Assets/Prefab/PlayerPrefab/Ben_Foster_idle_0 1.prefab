@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: -5859886204373733447}
   - component: {fileID: -8934455789690884416}
   - component: {fileID: 8987740185567924316}
+  - component: {fileID: 9054591452369101860}
   m_Layer: 0
   m_Name: Ben_Foster_idle_0 1
   m_TagString: Player
@@ -139,7 +140,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -292,10 +293,11 @@ MonoBehaviour:
   canWalk: 1
   canJump: 1
   speed: 8
-  jumpingPower: 10
+  jumpingPower: 14
   slideSpeed: 2
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}
+  boxColl: {fileID: 9054591452369101860}
 --- !u!95 &-5859886204373733447
 Animator:
   serializedVersion: 5
@@ -349,8 +351,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025031508, y: -0.0012515545}
-  m_Size: {x: 0.17499374, y: 0.5624529}
+  m_Offset: {x: -0.0065108775, y: -0.0012516022}
+  m_Size: {x: 0.18300925, y: 0.5424146}
   m_Direction: 0
 --- !u!114 &8987740185567924316
 MonoBehaviour:
@@ -364,7 +366,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fa5b4d946e21d40bcd1bc2185ff6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 1015066671188719411}
   rb: {fileID: 3093905190647170781}
+--- !u!61 &9054591452369101860
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409722532995306826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f863c1dd39f2a9248852618bb4fa2755, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0061702207, y: 0.043040797}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4, y: 0.6}
+    newSize: {x: 0.4, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1785814, y: 0.44338652}
+  m_EdgeRadius: 0
 --- !u!1 &4071125046391519043
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 4071125046391519043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: 0.432, z: 0}
+  m_LocalPosition: {x: -0.005, y: 0.308, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -423,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 7041770133246193759}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.002026379, y: -0.178, z: 0}
+  m_LocalPosition: {x: 0.002, y: -0.323, z: 0}
   m_LocalScale: {x: 1.99471, y: 0.21023, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -488,9 +536,9 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7041770133246193759}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f863c1dd39f2a9248852618bb4fa2755, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
