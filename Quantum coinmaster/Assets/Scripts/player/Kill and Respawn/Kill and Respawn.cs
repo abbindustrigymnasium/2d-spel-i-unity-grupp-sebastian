@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class KillandRespawn : MonoBehaviour
 {
+    //public PlayerMovement playerMovement;
     public Rigidbody2D rb;
     private Animator anim;
-    private PlayerMovement playerMovement;
+
 
     void Start()
     {
@@ -26,8 +27,10 @@ public class KillandRespawn : MonoBehaviour
 
     private void Die()
     {
+
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+
     }
 
     private void RestartLevel()
