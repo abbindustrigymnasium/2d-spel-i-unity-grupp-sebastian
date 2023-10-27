@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     public CapsuleCollider2D regularColl;
     public CapsuleCollider2D slideColl;
 
+    public BoxCollider2D boxColl;
+
 
     // Start is called before the first frame update
     void Start()
@@ -148,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
 
         regularColl.enabled = false;
         slideColl.enabled = true;
+        boxColl.enabled = false;
 
         StartCoroutine("stopSlide");
     }
@@ -161,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
         }
         regularColl.enabled = true;
         slideColl.enabled = false;
+        boxColl.enabled = true;
 
         isSliding = false;
         canWalk = true;
