@@ -11,7 +11,7 @@ public class Moving_x : MonoBehaviour
     public float xLeft;
     public float xRight;
 
-    private bool goingUp = false;
+    private bool goingLeft = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +23,20 @@ public class Moving_x : MonoBehaviour
     {
         Vector3 targetPosition = trap.position; // Declare targetPosition outside
 
-        if (trap.position.x > xLeft - speed && !goingUp) // Typo fix: goingUp instead of going
-        {
-            targetPosition = new Vector3(trap.position.x - speed, trap.position.y, trap.position.z);
-            if (trap.position.x < yLeft)
-            {
-                goingUp = true;
-            }
-        }
-        else if (trap.position.y < yTop + speed && goingUp) // Typo fix: goingUp instead of going
+        if (trap.position.x < xRight + speed && !goingLeft)
         {
             targetPosition = new Vector3(trap.position.x + speed, trap.position.y, trap.position.z);
-            if (trap.position.x > yRight)
+            if (trap.position.x > xRight)
             {
-                goingUp = false;
+                goingLeft = true;
+            }
+        }
+        else if (trap.position.x > xLeft - speed && goingLeft) // Typo fix: goingUp instead of going
+        {
+            targetPosition = new Vector3(trap.position.x - speed, trap.position.y, trap.position.z);
+            if (trap.position.x < xLeft)
+            {
+                goingLeft = false;
             }
         }
 
