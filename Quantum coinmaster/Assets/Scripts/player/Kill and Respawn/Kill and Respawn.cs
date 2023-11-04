@@ -52,7 +52,7 @@ public class KillandRespawn : MonoBehaviour
     private void RestartLevel()
     {
         objectToActivate.SetActive(true);
-        //gameManager.pauseGame();
+        gameManager.pauseGame();
         
         Debug.Log("Dead");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
