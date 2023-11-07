@@ -1,5 +1,9 @@
 
 
+
+using System.Globalization;
+using System.ComponentModel;
+using System.Timers;
 using System.Security.AccessControl;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,120 +28,174 @@ public class PowerUps : MonoBehaviour
 
     public float cooldownDuration = 20.0f;
 
-    public float[] powerUpDuration = {5.0f, 5.0f, 10.0f, 20.0f, 30.0f};
+    public float[] powerUpDuration = { 5.0f, 5.0f, 5.0f, 5.0f, 5.0f };
 
-    public bool[] isActivePowerUp = new bool[5];
-
+    public bool isActivePowerUp = false;
     public PlayerMovement movement;
-
     public KillAndRespawn killAndRespawn;
-
     public int speedMultiplier = 1;
-
     public Image powerUpBackground;
+    public Color backgroundColor = new Color();
 
-    public Color SuperDrugBackgroundColor = new Color();
+    public Color iconColor = new Color();
 
-    public Color invincibilityBackgroundColor= new Color();
+    public Color activeIconColor = new Color();
 
-     public Color doubleJumpBackgroundColor = new Color();
-
-    public Color moonGravityBackgroundColor = new Color();
-
-
-    public Color FlyingBackgroundColor = new Color();
-    public float a = 0.0005f;
+    public float a = 0.1f;
 
     public PowerUpIconMovement superDrugIconMovement;
 
-        public PowerUpIconMovement invinsibilityIconMovement;
+    public PowerUpIconMovement invinsibilityIconMovement;
 
-        public PowerUpIconMovement doubleJumpIconMovement;
+    public PowerUpIconMovement doubleJumpIconMovement;
 
-        public PowerUpIconMovement moonGravityIconMovement;
-        public PowerUpIconMovement flyingIconMovement;
+    public PowerUpIconMovement moonGravityIconMovement;
+    public PowerUpIconMovement flyingIconMovement;
+
+    private float elapsedTime = 0.0f;
+
 
 
     public void Start()
     {
-       Color backgroundColor = powerUpBackground.color;
-        backgroundColor.a =0.5f;
 
-        powerUpBackground.color = backgroundColor;
     }
 
     // Update is called once per frame
     void Update()
+
     {
         //Debug.Log(speed);
+        
+
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SuperDrugPowerUp();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
             InvinsibilityPowerUp();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
             DoubleJumpPowerUp();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
             MoonGravity();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5)) {
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
             FlyingPowerUp();
         }
 
-        if (isActivePowerUp[0]) {
-            powerUpBackground.color = SuperDrugBackgroundColor;
-            SuperDrugBackgroundColor.a = SuperDrugBackgroundColor.a-a;
-            Debug.Log(SuperDrugBackgroundColor.a);
-            powerUpBackground.color = SuperDrugBackgroundColor;
+        if (isActivePowerUp)
+        {
+            powerUpBackground.color = backgroundColor;
 
+            backgroundColor.a = 0.7f - (elapsedTime * a);
+            //Debug.Log(SuperDrugbackgroundColor.a);
+            //Debug.Log(backgroundColor.a);
+            //Debug.Log(elapsedTime);
+
+            
+        elapsedTime += Time.deltaTime;
 
         }
+
+        if (isCooldown) {
+            iconColor = new Color(1.0f-(elapsedTime*a), 1.0f-(elapsedTime*a), 1.0f-(elapsedTime*a));
+            //Debug.Log(iconColor);
+            Debug.Log(elapsedTime);
+            elapsedTime += Time.deltaTime;
+            superDrugIconMovement.SetIconColor(iconColor);
+            invinsibilityIconMovement.SetIconColor(iconColor);
+            doubleJumpIconMovement.SetIconColor(iconColor);
+            moonGravityIconMovement.SetIconColor(iconColor);
+            moonGravityIconMovement.SetIconColor(iconColor);
+
+            Debug.Log(iconColor);
+        }
+
 
 
 
     }
+
+
 
     private void ResetCooldown()
     {
         isCooldown = false;
+        superDrugIconMovement.inRecovery = false;
+        Debug.Log("Ready to click!");
+
+                    iconColor = activeIconColor;
+            superDrugIconMovement.SetIconColor(iconColor);
+            invinsibilityIconMovement.SetIconColor(iconColor);
+            doubleJumpIconMovement.SetIconColor(iconColor);
+            moonGravityIconMovement.SetIconColor(iconColor);
+            moonGravityIconMovement.SetIconColor(iconColor);
+            elapsedTime = 0;
+        
+
+
     }
 
 
-    public void PowerUpAnimation() {
-        
+    public void PowerUpAnimation()
+    {
+
     }
 
     private void PowerDownSuperdrug()
     {
-        movement.speed = movement.speed/3;
-        isActivePowerUp[0] = false;
+        movement.speed = movement.speed / 3;
+        isActivePowerUp = false;
         superDrugIconMovement.isActivated = false;
-        superDrugIconMovement.ReturnTOBaseRotation();
-        Invoke("ResetCooldownS", cooldownDuration);
+        superDrugIconMovement.inRecovery = true;
+        Invoke("ResetCooldown", cooldownDuration);
 
     }
 
-    private void PowerDownInvinsibility() {
+    private void PowerDownInvinsibility()
+    {
         killAndRespawn.isInvinsable = false;
         Invoke("ResetCooldown", cooldownDuration);
+        isActivePowerUp = false;
+        invinsibilityIconMovement.isActivated = false;
+        invinsibilityIconMovement.inRecovery = true;
+
     }
 
-    private void PowerDownDoubleJump() {
+    private void PowerDownDoubleJump()
+    {
         movement.doubleJumpOn = false;
         Invoke("ResetCooldown", cooldownDuration);
+        isActivePowerUp = false;
+        doubleJumpIconMovement.isActivated = false;
+        doubleJumpIconMovement.inRecovery = true;
+
     }
 
-    private void PowerDownMoonGravity() {
-        movement.rb.gravityScale = movement.rb.gravityScale*3;
+    private void PowerDownMoonGravity()
+    {
+        movement.rb.gravityScale = movement.rb.gravityScale * 3;
         Invoke("ResetCooldown", cooldownDuration);
+        isActivePowerUp = false;
+        moonGravityIconMovement.isActivated = false;
+        moonGravityIconMovement.inRecovery = true;
+
     }
 
-    private void PowerDownFlying() {
-        Invoke("ResetCooldown", cooldownDuration); 
+    private void PowerDownFlying()
+    {
+        Invoke("ResetCooldown", cooldownDuration);
+        isActivePowerUp = false;
+        flyingIconMovement.isActivated = false;
+        flyingIconMovement.inRecovery = true;
+
     }
 
     public void SuperDrugPowerUp()
@@ -149,19 +207,23 @@ public class PowerUps : MonoBehaviour
             isCooldown = true;
             Invoke("PowerDownSuperdrug", powerUpDuration[0]);
 
-            SuperDrugBackgroundColor.a = 0.7f;
-            isActivePowerUp[0] = true;
+            backgroundColor.a = 0.4f;
+            isActivePowerUp = true;
             superDrugIconMovement.isActivated = true;
-            
+
         }
     }
 
     public void FlyingPowerUp()
     {
-        if(!isCooldown) {
+        if (!isCooldown)
+        {
             Debug.Log("FlyingPowerUp");
             isCooldown = true;
-            Invoke("PowerDownFlying", powerUpDuration[5]);
+            Invoke("PowerDownFlying", powerUpDuration[4]);
+            backgroundColor.a = 0.4f;
+            isActivePowerUp = true;
+            flyingIconMovement.isActivated = true;
 
         }
     }
@@ -174,6 +236,10 @@ public class PowerUps : MonoBehaviour
             killAndRespawn.isInvinsable = true;
             isCooldown = true;
             Invoke("PowerDownInvinsibility", powerUpDuration[1]);
+
+            backgroundColor.a = 0.4f;
+            isActivePowerUp = true;
+            invinsibilityIconMovement.isActivated = true;
 
         }
 
@@ -188,18 +254,31 @@ public class PowerUps : MonoBehaviour
             isCooldown = true;
             Invoke("PowerDownDoubleJump", powerUpDuration[2]);
 
+            backgroundColor.a = 0.4f;
+            isActivePowerUp = true;
+            doubleJumpIconMovement.isActivated = true;
+
         }
     }
 
-    public void MoonGravity() {
-                if (!isCooldown)
+    public void MoonGravity()
+    {
+        if (!isCooldown)
         {
             Debug.Log("Moon Gravity");
-            movement.rb.gravityScale = movement.rb.gravityScale/3;
+            movement.rb.gravityScale = movement.rb.gravityScale / 3;
 
             isCooldown = true;
             Invoke("PowerDownMoonGravity", powerUpDuration[3]);
 
+
+            backgroundColor.a = 0.4f;
+            isActivePowerUp = true;
+            moonGravityIconMovement.isActivated = true;
+
+
         }
     }
+
+
 }
