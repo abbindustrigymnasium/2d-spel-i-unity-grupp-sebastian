@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading;
 
-public class KillandRespawn : MonoBehaviour
+public class KillAndRespawn : MonoBehaviour
 {
     //public PlayerMovement playerMovement;
     public Rigidbody2D rb;
@@ -15,6 +15,8 @@ public class KillandRespawn : MonoBehaviour
     public GameObject objectToActivate;
 
     public GameManager gameManager;
+
+    public bool isInvinsable = false;
 
     void Start()
     {
@@ -28,8 +30,10 @@ public class KillandRespawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("trap"))
         {
-
-            Die();
+            if (!isInvinsable) {
+                 Die();
+            }
+           
            
 
            

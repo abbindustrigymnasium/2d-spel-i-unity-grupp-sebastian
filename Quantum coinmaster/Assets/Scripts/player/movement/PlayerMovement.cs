@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public PowerUps powerUps;
+
     public float test = 8;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -17,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isSliding = false;
     public bool canWalk = true;
     public bool canJump = true;
+
+    private bool doubleJump = false;
 
     public float speed = 8f;
     public float jumpingPower = 16f;
@@ -33,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     public BoxCollider2D boxColl;
 
+    public bool doubleJumpOn = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +48,16 @@ public class PlayerMovement : MonoBehaviour
         originalSlideSpeed = slideSpeed;
     }
 
+    /*public float updateSpeed() {
+        float speed = powerUps.speed;
+        return speed;
+    } */
+
     // Update is called once per frame
     void FixedUpdate()
     {
+     
+        //Debug.Log(speed);
         if (rb.bodyType == RigidbodyType2D.Static)
         { // används för att reseta animationerna vid spelardöd
             animator.SetBool("isSliding", false);
@@ -71,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isJumping", false);
             }
+
+
 
             if (!isFacingRight && horizontal > 0f)
             {
@@ -115,9 +130,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canJump == true)
         {
-            if (context.performed && isGrounded())
+            if (context.performed && (isGrounded() || (doubleJump && doubleJumpOn)) )
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                doubleJump = !doubleJump;
             }
             if (context.canceled && rb.velocity.y > 0f)
             {
