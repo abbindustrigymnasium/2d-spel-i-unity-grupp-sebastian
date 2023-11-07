@@ -300,6 +300,7 @@ MonoBehaviour:
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}
   boxColl: {fileID: 9054591452369101860}
+  moving_x: {fileID: 8476392857949233216, guid: e2b7a4568d92e4a4d840cc87c9a4a1e2, type: 3}
 --- !u!95 &-5859886204373733447
 Animator:
   serializedVersion: 5
