@@ -8,27 +8,29 @@ public class Moving_x : MonoBehaviour
 
     public float speed;
 
+    public float realSpeed = 0;
+
     public float xLeft;
     public float xRight;
 
     private bool goingLeft = false;
 
     public Transform player;
+    public Rigidbody2D rbPlayer;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 targetPosition = trap.position; // Declare targetPosition outside
-
         if (trap.position.x < xRight + speed && !goingLeft)
         {
-            targetPosition = new Vector3(trap.position.x + speed, trap.position.y, trap.position.z);
+            rb.velocity = new Vector2(speed, rb.velocity.y);
             if (trap.position.x > xRight)
             {
                 goingLeft = true;
@@ -36,21 +38,29 @@ public class Moving_x : MonoBehaviour
         }
         else if (trap.position.x > xLeft - speed && goingLeft) // Typo fix: goingUp instead of going
         {
-            targetPosition = new Vector3(trap.position.x - speed, trap.position.y, trap.position.z);
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
             if (trap.position.x < xLeft)
             {
                 goingLeft = false;
             }
         }
-
-        trap.position = targetPosition; // Apply the targetPosition
+        if (realSpeed != 0)
+        {
+            realSpeed = rb.velocity.x;
+        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("HELLLLLLLOOOO");
-            player.position = new Vector3(trap.position.x, trap.position.y, trap.position.z);
+            realSpeed = rb.velocity.x;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            realSpeed = 0;
         }
     }
 }
