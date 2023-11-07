@@ -12,6 +12,9 @@ public class Moving_x : MonoBehaviour
     public float xRight;
 
     private bool goingLeft = false;
+
+    public Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +44,13 @@ public class Moving_x : MonoBehaviour
         }
 
         trap.position = targetPosition; // Apply the targetPosition
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("HELLLLLLLOOOO");
+            player.position = new Vector3(trap.position.x, trap.position.y, trap.position.z);
+        }
     }
 }
