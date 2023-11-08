@@ -205,7 +205,7 @@ public class PowerUps : MonoBehaviour
 
     public void SuperDrugPowerUp()
     {
-        if (!isCooldown && invisibilityPowerUpOn)
+        if (!isCooldown && superDrugPowerUpOn)
         {
             Debug.Log("SuperdrugPowerUp");
             movement.speed = movement.speed * 3;
