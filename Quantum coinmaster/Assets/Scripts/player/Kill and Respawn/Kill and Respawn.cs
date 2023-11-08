@@ -20,6 +20,8 @@ public class KillAndRespawn : MonoBehaviour
 
     public PlayerTeleport playerTeleport;
 
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,8 @@ public class KillAndRespawn : MonoBehaviour
         // anim = getComponent<Animator>();
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
+
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -49,7 +53,7 @@ public class KillAndRespawn : MonoBehaviour
 
     }
 
-    private void Die()
+    public void Die()
     {
 
         rb.bodyType = RigidbodyType2D.Static;
@@ -66,4 +70,6 @@ public class KillAndRespawn : MonoBehaviour
         Debug.Log("Dead");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
 }

@@ -14,7 +14,13 @@ public class Player : MonoBehaviour
 
     public PowerUps powerUps;
 
-    private bool loaded = true;
+    private bool loaded;
+
+    public KillAndRespawn killAndRespawn;
+
+        public bool isDead = false;
+
+    public bool savePlayer = false;
     // Start is called before the first frame update
 
     public void Awake()
@@ -22,8 +28,14 @@ public class Player : MonoBehaviour
 
     }
     void Start()
+
     {
-       LoadPlayer();
+        if(savePlayer) {
+            SavePlayer();
+            savePlayer = false;
+        }
+        LoadPlayer();
+
     }
 
     public void SavePlayer() {
@@ -64,7 +76,7 @@ public class Player : MonoBehaviour
     public void LoadPlayer() {
         Car data = Save.LoadFile();
         
-        transform.position = new Vector3(data.startingPosX, transform.position.y, 0);
+        transform.position = new Vector3(data.startingPosX, data.startingPosY, 0);
         
         Coins = data.coins;
 
@@ -82,8 +94,17 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+            
+        if (isDead) {
+            Debug.Log("died");
+            killAndRespawn.Die();
+            isDead = false;
+        }
 
+
+
+    
     }
 }

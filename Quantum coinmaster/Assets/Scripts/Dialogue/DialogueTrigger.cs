@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public Player player;
     public Dialogue dialogueScript;
     private bool playerDetected;
     private void OnTriggerEnter2D(Collider2D collision){
@@ -24,6 +25,8 @@ public class DialogueTrigger : MonoBehaviour
     private void Update(){
         if(playerDetected && Input.GetKeyDown(KeyCode.E)){
             dialogueScript.StartDialogue();
+            player.SavePlayer();
+            Debug.Log("SeucessFully Saved");
         }
     }
 }

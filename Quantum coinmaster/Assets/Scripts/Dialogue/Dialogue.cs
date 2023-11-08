@@ -10,6 +10,8 @@ public class Dialogue : MonoBehaviour
     public TMP_Text dialogueText;
     public float writingSpeed;
 
+    public Player player;
+
     private int index;
     private int charIndex;
     private bool started;
@@ -72,6 +74,8 @@ public class Dialogue : MonoBehaviour
                 retrieveDialogue(index);
             }else{
                 EndDialogue();
+                
+
             }
         }
     }
