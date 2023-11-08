@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public bool doubleJumpOn = false;
 
     public float jumpForce = 500.0f;
+    public Moving_x moving_x;
 
 
     // Start is called before the first frame update
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isSliding", isSliding);
             animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
             animator.SetFloat("yVelocity", rb.velocity.y);
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontal * speed + moving_x.realSpeed, rb.velocity.y);
             if (isSliding == true)
             {
                 rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
