@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 3409722532995306826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.432325, y: 2.9040189, z: 0}
+  m_LocalPosition: {x: 14.7, y: 2.9040189, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3093905190647170781}
-  powerUps: {fileID: 0}
+  powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
   test: 8
   groundCheck: {fileID: 3803328229205939496}
   groundLayer:
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coins: 0
   Level: 0
+  powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
 --- !u!70 &-8934455789690884416
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -400,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3093905190647170781}
-  objectToActivate: {fileID: 0}
+  objectToActivate: {fileID: 6304260713152625735, guid: d8d9c8e8884345345beea5768a54e6cc, type: 3}
   gameManager: {fileID: 3975024479833969200, guid: 01c76527b3e0ced44bc79ba7b70706b7, type: 3}
   isInvinsable: 0
   playerTeleport: {fileID: 923876453709842680}

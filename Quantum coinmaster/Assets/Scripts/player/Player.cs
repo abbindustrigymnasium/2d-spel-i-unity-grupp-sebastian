@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public int Coins = 0;
     public int Level = 0;
 
+    public PowerUps powerUps;
+
     private bool loaded = true;
     // Start is called before the first frame update
 
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-
+       LoadPlayer();
     }
 
     public void SavePlayer() {
@@ -30,6 +32,12 @@ public class Player : MonoBehaviour
         myObj.startingPosY = transform.position.y;
         myObj.level = SceneManager.GetActiveScene().name;
         myObj.coins = Coins;
+
+    myObj.superDrugPowerUpOn = powerUps.superDrugPowerUpOn;
+    myObj.flyingPowerUpOn = powerUps.flyingPowerUpOn;
+    myObj.invisibilityPowerUpOn = powerUps.invisibilityPowerUpOn;
+    myObj.doubleJumpingPowerUpOn = powerUps.doubleJumpingPowerUpOn;
+    myObj.moonGravityPowerUpOn = powerUps.moonGravityPowerUpOn;
 
 
         Save.SaveData(myObj);
@@ -44,16 +52,27 @@ public class Player : MonoBehaviour
         myObj.coins = 0;
 
 
+    myObj.superDrugPowerUpOn = false;
+    myObj.flyingPowerUpOn = false;
+    myObj.invisibilityPowerUpOn = false;
+    myObj.doubleJumpingPowerUpOn = false ;
+    myObj.moonGravityPowerUpOn = false;
         Save.SaveData(myObj);
         LoadPlayer();
     }
 
     public void LoadPlayer() {
         Car data = Save.LoadFile();
-        SceneManager.LoadScene(data.level);
+        
         transform.position = new Vector3(data.startingPosX, transform.position.y, 0);
         
         Coins = data.coins;
+
+    powerUps.superDrugPowerUpOn = data.superDrugPowerUpOn;
+    powerUps.flyingPowerUpOn = data.flyingPowerUpOn;
+    powerUps.invisibilityPowerUpOn = data.invisibilityPowerUpOn;
+    powerUps.doubleJumpingPowerUpOn = data.doubleJumpingPowerUpOn;
+    powerUps.moonGravityPowerUpOn = data.moonGravityPowerUpOn;
         
     }
 
@@ -65,6 +84,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SavePlayer();
+
     }
 }

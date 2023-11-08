@@ -17,6 +17,11 @@ public class Car
     public int coins = 0;
 
     public string level = "";
+    public bool superDrugPowerUpOn = true;
+    public bool flyingPowerUpOn = true;
+    public bool invisibilityPowerUpOn = true;
+    public bool doubleJumpingPowerUpOn = true;
+    public bool moonGravityPowerUpOn = true;
 }
 public class Save : MonoBehaviour
 {

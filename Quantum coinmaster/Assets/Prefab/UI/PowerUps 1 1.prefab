@@ -88,8 +88,8 @@ MonoBehaviour:
   - 5
   - 5
   isActivePowerUp: 0
-  movement: {fileID: 0}
-  killAndRespawn: {fileID: 0}
+  movement: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  killAndRespawn: {fileID: 8987740185567924316, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
   speedMultiplier: 1
   powerUpBackground: {fileID: 6641930531086619019}
   backgroundColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
@@ -101,7 +101,7 @@ MonoBehaviour:
   doubleJumpIconMovement: {fileID: 60354520001738691}
   moonGravityIconMovement: {fileID: 6291164782130725805}
   flyingIconMovement: {fileID: 8337320671815796725}
-  playerTeleport: {fileID: 0}
+  playerTeleport: {fileID: 923876453709842680, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
 --- !u!222 &7736770415216705307
 CanvasRenderer:
   m_ObjectHideFlags: 0
