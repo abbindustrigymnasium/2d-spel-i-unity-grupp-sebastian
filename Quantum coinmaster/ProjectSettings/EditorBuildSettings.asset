@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Edwardian_Scene.unity
+    guid: d6498cb73274dd9438b1b88461de0051
+  - enabled: 1
     path: Assets/Scenes/Scene_2.unity
     guid: 5d0cf29e3b5f95241ba11a3415c546bb
   - enabled: 1
@@ -29,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_CP1.unity
     guid: 1ca204a1b6b31ad47bf5fed7366ec992
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_CP2.unity
     guid: e3b780990b4cfb74cbed90c3bf7873e6
   m_configObjects: {}
