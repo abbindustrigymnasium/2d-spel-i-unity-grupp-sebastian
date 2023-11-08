@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: -8934455789690884416}
   - component: {fileID: 8987740185567924316}
   - component: {fileID: 9054591452369101860}
+  - component: {fileID: 923876453709842680}
   m_Layer: 0
   m_Name: Ben_Foster_idle_0 1
   m_TagString: Player
@@ -66,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 3409722532995306826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.85724, y: 2.9040189, z: 0}
+  m_LocalPosition: {x: 4, y: -0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -295,13 +296,14 @@ MonoBehaviour:
   isSliding: 1
   canWalk: 1
   canJump: 1
-  speed: 300
+  speed: 8
   jumpingPower: 14
   slideSpeed: 2
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}
   boxColl: {fileID: 9054591452369101860}
   doubleJumpOn: 0
+  jumpForce: 500
 --- !u!95 &-5859886204373733447
 Animator:
   serializedVersion: 5
@@ -397,9 +399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3093905190647170781}
-  objectToActivate: {fileID: 6304260713152625735, guid: d8d9c8e8884345345beea5768a54e6cc, type: 3}
+  objectToActivate: {fileID: 0}
   gameManager: {fileID: 3975024479833969200, guid: 01c76527b3e0ced44bc79ba7b70706b7, type: 3}
   isInvinsable: 0
+  playerTeleport: {fileID: 923876453709842680}
 --- !u!61 &9054591452369101860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -445,6 +448,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1785814, y: 0.44338652}
   m_EdgeRadius: 0
+--- !u!114 &923876453709842680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409722532995306826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713cf2b52fc998644951e506728d3fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3093905190647170781}
+  lastPosition: {x: 0, y: 0, z: 0}
+  isFlying: 0
 --- !u!1 &4071125046391519043
 GameObject:
   m_ObjectHideFlags: 0

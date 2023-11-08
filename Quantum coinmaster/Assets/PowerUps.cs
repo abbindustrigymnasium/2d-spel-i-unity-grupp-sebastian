@@ -52,6 +52,8 @@ public class PowerUps : MonoBehaviour
     public PowerUpIconMovement moonGravityIconMovement;
     public PowerUpIconMovement flyingIconMovement;
 
+    public PlayerTeleport playerTeleport;
+
     private float elapsedTime = 0.0f;
 
 
@@ -72,6 +74,7 @@ public class PowerUps : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SuperDrugPowerUp();
+            Time.timeScale = -1f; // Reverse time
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -107,15 +110,15 @@ public class PowerUps : MonoBehaviour
         if (isCooldown) {
             iconColor = new Color(1.0f-(elapsedTime*a), 1.0f-(elapsedTime*a), 1.0f-(elapsedTime*a));
             //Debug.Log(iconColor);
-            Debug.Log(elapsedTime);
+            //Debug.Log(elapsedTime);
             elapsedTime += Time.deltaTime;
             superDrugIconMovement.SetIconColor(iconColor);
             invinsibilityIconMovement.SetIconColor(iconColor);
             doubleJumpIconMovement.SetIconColor(iconColor);
             moonGravityIconMovement.SetIconColor(iconColor);
-            moonGravityIconMovement.SetIconColor(iconColor);
+            flyingIconMovement.SetIconColor(iconColor);
 
-            Debug.Log(iconColor);
+            //Debug.Log(iconColor);
         }
 
 
@@ -136,7 +139,7 @@ public class PowerUps : MonoBehaviour
             invinsibilityIconMovement.SetIconColor(iconColor);
             doubleJumpIconMovement.SetIconColor(iconColor);
             moonGravityIconMovement.SetIconColor(iconColor);
-            moonGravityIconMovement.SetIconColor(iconColor);
+            flyingIconMovement.SetIconColor(iconColor);
             elapsedTime = 0;
         
 
@@ -195,6 +198,7 @@ public class PowerUps : MonoBehaviour
         isActivePowerUp = false;
         flyingIconMovement.isActivated = false;
         flyingIconMovement.inRecovery = true;
+        playerTeleport.isFlying = false;
 
     }
 
@@ -224,7 +228,7 @@ public class PowerUps : MonoBehaviour
             backgroundColor.a = 0.4f;
             isActivePowerUp = true;
             flyingIconMovement.isActivated = true;
-
+            playerTeleport.isFlying = true;
         }
     }
 

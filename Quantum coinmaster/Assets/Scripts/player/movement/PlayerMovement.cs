@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool doubleJumpOn = false;
 
+    public float jumpForce = 500.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-     
+       
         //Debug.Log(speed);
         if (rb.bodyType == RigidbodyType2D.Static)
         { // används för att reseta animationerna vid spelardöd
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed * slideSpeed, rb.velocity.y);
             }
+
 
             if (!isGrounded() && !isSliding)
             {
@@ -140,6 +143,8 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             }
         }
+
+        
     }
 
     public void Slide(InputAction.CallbackContext context)

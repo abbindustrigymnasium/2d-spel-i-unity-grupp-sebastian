@@ -66,7 +66,8 @@ public class PowerUpIconMovement : MonoBehaviour
     }
 
     public void SetIconColor(Color newColor) {
-        //newColor.a
+        color = PowerUpImage.color;
+        newColor.a = color.a;
         PowerUpImage.color = newColor;
     }
 

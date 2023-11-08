@@ -18,6 +18,8 @@ public class KillAndRespawn : MonoBehaviour
 
     public bool isInvinsable = false;
 
+    public PlayerTeleport playerTeleport;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +34,9 @@ public class KillAndRespawn : MonoBehaviour
         {
             if (!isInvinsable) {
                  Die();
+            }
+            else {
+                playerTeleport.Teleport();
             }
            
            
