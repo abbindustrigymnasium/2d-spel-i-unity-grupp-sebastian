@@ -75,10 +75,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec93476560ce2124b877e5293779acd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  superDrugPowerOn: 1
-  flyingPowerOn: 1
-  invisibilityPowerOn: 1
-  douleJumpingPowerOn: 1
+  superDrugPowerUpOn: 1
+  flyingPowerUpOn: 0
+  invisibilityPowerUpOn: 0
+  doubleJumpingPowerUpOn: 0
+  moonGravityPowerUpOn: 0
   cooldownDuration: 20
   powerUpDuration:
   - 5
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c02bcc8c7eced469da888692927d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 1319851550423970562}
   dynamicYPos: 1
   PowerUpImage: {fileID: 8915134273534623359}
   color: {r: 0, g: 0, b: 0, a: 0}
@@ -405,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c02bcc8c7eced469da888692927d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 1450451655867683289}
   dynamicYPos: 1
   PowerUpImage: {fileID: 3023623208447956829}
   color: {r: 0, g: 0, b: 0, a: 0}
@@ -556,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c02bcc8c7eced469da888692927d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 3189437824614724012}
   dynamicYPos: 1
   PowerUpImage: {fileID: 8062467170008767023}
   color: {r: 0, g: 0, b: 0, a: 0}
@@ -886,6 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c02bcc8c7eced469da888692927d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 6818543813701175778}
   dynamicYPos: 1
   PowerUpImage: {fileID: 3030725451283061486}
   color: {r: 0, g: 0, b: 0, a: 0}
@@ -1050,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c02bcc8c7eced469da888692927d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 8966276258942506066}
   dynamicYPos: 1
   PowerUpImage: {fileID: 3113282286880981038}
   color: {r: 0, g: 0, b: 0, a: 0}
