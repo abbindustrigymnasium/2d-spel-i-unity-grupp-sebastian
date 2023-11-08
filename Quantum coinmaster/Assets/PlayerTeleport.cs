@@ -6,12 +6,11 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     public Rigidbody2D rb;
-
     public Vector3 lastPosition;
     private bool isTeleporting = false;
     private float teleportDelay = 2.0f; // Set the delay time in seconds
-
     public bool isFlying = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +56,7 @@ public class PlayerTeleport : MonoBehaviour
 
         // After the teleport delay, the player will be teleported back.
     }
+
 
 
 }

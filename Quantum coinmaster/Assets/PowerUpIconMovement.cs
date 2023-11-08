@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PowerUpIconMovement : MonoBehaviour
 {
     //movement speed in units per second
+        public GameObject gameObject;
 
     public bool dynamicYPos = true;
     private float testValue = 0f;
@@ -69,6 +70,9 @@ public class PowerUpIconMovement : MonoBehaviour
         color = PowerUpImage.color;
         newColor.a = color.a;
         PowerUpImage.color = newColor;
+    }
+    public void GameObjectVisibility(bool isVisable) {
+        gameObject.SetActive(isVisable);
     }
 
 

@@ -15,15 +15,12 @@ using UnityEngine.UI;
 public class PowerUps : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool superDrugPowerOn = true;
-    public bool flyingPowerOn = true;
-
-    public bool invisibilityPowerOn = true;
-
-    public bool douleJumpingPowerOn = true;
-
+    public bool superDrugPowerUpOn = true;
+    public bool flyingPowerUpOn = true;
+    public bool invisibilityPowerUpOn = true;
+    public bool doubleJumpingPowerUpOn = true;
+    public bool moonGravityPowerUpOn = true;
     //public float speed = 8f;
-
     private bool isCooldown = false;
 
     public float cooldownDuration = 20.0f;
@@ -60,7 +57,11 @@ public class PowerUps : MonoBehaviour
 
     public void Start()
     {
-
+        superDrugIconMovement.GameObjectVisibility(superDrugPowerUpOn);
+        invinsibilityIconMovement.GameObjectVisibility(invisibilityPowerUpOn);
+        doubleJumpIconMovement.GameObjectVisibility(doubleJumpingPowerUpOn);
+        moonGravityIconMovement.GameObjectVisibility(moonGravityPowerUpOn);
+        flyingIconMovement.GameObjectVisibility(flyingPowerUpOn);
     }
 
     // Update is called once per frame
@@ -74,7 +75,7 @@ public class PowerUps : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SuperDrugPowerUp();
-            Time.timeScale = -1f; // Reverse time
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -204,7 +205,7 @@ public class PowerUps : MonoBehaviour
 
     public void SuperDrugPowerUp()
     {
-        if (!isCooldown)
+        if (!isCooldown && invisibilityPowerUpOn)
         {
             Debug.Log("SuperdrugPowerUp");
             movement.speed = movement.speed * 3;
@@ -220,7 +221,7 @@ public class PowerUps : MonoBehaviour
 
     public void FlyingPowerUp()
     {
-        if (!isCooldown)
+        if (!isCooldown && flyingPowerUpOn)
         {
             Debug.Log("FlyingPowerUp");
             isCooldown = true;
@@ -234,7 +235,7 @@ public class PowerUps : MonoBehaviour
 
     public void InvinsibilityPowerUp()
     {
-        if (!isCooldown)
+        if (!isCooldown && invisibilityPowerUpOn)
         {
             Debug.Log("InvinsibilityPowerUp");
             killAndRespawn.isInvinsable = true;
@@ -251,7 +252,7 @@ public class PowerUps : MonoBehaviour
 
     public void DoubleJumpPowerUp()
     {
-        if (!isCooldown)
+        if (!isCooldown && doubleJumpingPowerUpOn)
         {
             Debug.Log("DoubleJumpPowerUp");
             movement.doubleJumpOn = true;
@@ -267,7 +268,7 @@ public class PowerUps : MonoBehaviour
 
     public void MoonGravity()
     {
-        if (!isCooldown)
+        if (!isCooldown && moonGravityPowerUpOn)
         {
             Debug.Log("Moon Gravity");
             movement.rb.gravityScale = movement.rb.gravityScale / 3;
