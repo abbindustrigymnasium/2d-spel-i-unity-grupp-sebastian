@@ -11,6 +11,9 @@ public class Dialogue : MonoBehaviour
     public float writingSpeed;
 
     public Player player;
+    public BenTimeLine_Lab IntroCutscene;
+    public bool useIntro;
+    public int chosenIndex;
 
     private int index;
     private int charIndex;
@@ -71,11 +74,16 @@ public class Dialogue : MonoBehaviour
             waitForNext = false;
             index++;
             if(index < dialogues.Count){
+                if(useIntro && index == chosenIndex){
+                    IntroCutscene.AnimateScientist();
+                }
                 retrieveDialogue(index);
             }else{
                 EndDialogue();
-                
-
+                if(useIntro){
+                    IntroCutscene.AnimatePortal();
+                    IntroCutscene.PlayTimeline();
+                }
             }
         }
     }
