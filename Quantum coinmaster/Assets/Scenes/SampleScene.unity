@@ -34238,7 +34238,7 @@ MonoBehaviour:
   follower: {fileID: 1151706987}
   xSpeed: 0.8
   ySpeed: 0
-  xStart: -270.14
+  xStart: 56.5
 --- !u!212 &1151706986
 SpriteRenderer:
   m_ObjectHideFlags: 0
