@@ -833,13 +833,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1238391103351107557, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: removeCode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: m_LocalPosition.x
       value: -730.11
       objectReference: {fileID: 0}
     - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.55
+      value: -9.94
       objectReference: {fileID: 0}
     - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: m_LocalPosition.z
@@ -873,10 +877,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2528403309519862256, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 21e3ea7072d3e2043bd38b1d31ce830c, type: 2}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Size.x
+      value: 74.65924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Size.y
+      value: 24.54012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Offset.x
+      value: 17.06955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Offset.y
+      value: 9.27006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3226229065787429090, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: m_Name
       value: Scientist
       objectReference: {fileID: 0}
+    - target: {fileID: 3456737642511848015, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7738943795ef66e4eaa3b9143e37d169, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
