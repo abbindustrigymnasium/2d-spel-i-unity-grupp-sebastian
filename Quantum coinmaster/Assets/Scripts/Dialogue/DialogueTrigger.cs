@@ -5,7 +5,10 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Player player;
+    private bool input;
     public Dialogue dialogueScript;
+    public bool removeCode;
+    private bool isTriggered = false;
     private bool playerDetected;
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.tag == "Player")
@@ -23,10 +26,16 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
     private void Update(){
-        if(playerDetected && Input.GetKeyDown(KeyCode.E)){
+        if (removeCode){
+            isTriggered = true;
+            removeCode = false;
             dialogueScript.StartDialogue();
-            player.SavePlayer();
-            Debug.Log("SeucessFully Saved");
+        } else {
+            if(!isTriggered && (playerDetected && Input.GetKeyDown(KeyCode.E))){
+                dialogueScript.StartDialogue();
+                player.SavePlayer();
+                Debug.Log("SeucessFully Saved");
+            }
         }
     }
 }
