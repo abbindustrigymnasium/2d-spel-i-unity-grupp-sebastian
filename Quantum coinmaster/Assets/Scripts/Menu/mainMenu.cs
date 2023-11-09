@@ -10,17 +10,38 @@ public class Menu : MonoBehaviour
 
     public Player player;
 
+    public Save save;
+
+    public Car saveData = new Car();
+
+
+
     void start()
     {
 
     }
     // Start is called before the first frame update
+
+    public void NewGame() {
+        player.StartOver();
+
+    }
+
+    public void LoadGame() {
+        
+        Car data = Save.LoadFile();
+        string currentSceneName = data.level;
+        SceneManager.LoadScene(currentSceneName);
+        player.LoadPlayer();
+
+    }
     public void PlayGame()
     {
-        player.LoadPlayer();
+        
         Scene currentScene = SceneManager.GetActiveScene();
         string currentSceneName = currentScene.name;
         SceneManager.LoadScene(currentSceneName);
+        player.LoadPlayer();
     }
     public void mainMenu()
     {

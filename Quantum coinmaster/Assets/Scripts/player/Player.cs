@@ -1,4 +1,5 @@
 
+
 using System.Resources;
 using System.Xml.Linq;
 using System.Collections;
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     public int Level = 0;
 
     public PowerUps powerUps;
+
+    public Save save;
 
     private bool loaded;
 
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
         myObj.startingPosX = transform.position.x;
         myObj.startingPosY = transform.position.y;
         myObj.level = SceneManager.GetActiveScene().name;
+
         myObj.coins = Coins;
 
     myObj.superDrugPowerUpOn = powerUps.superDrugPowerUpOn;
@@ -51,15 +55,15 @@ public class Player : MonoBehaviour
     myObj.doubleJumpingPowerUpOn = powerUps.doubleJumpingPowerUpOn;
     myObj.moonGravityPowerUpOn = powerUps.moonGravityPowerUpOn;
 
-
+        
         Save.SaveData(myObj);
-
+        save.data = Save.LoadFile();
     }
 
     public void StartOver() {
                 Car myObj = new Car();
-        myObj.startingPosX = 0;
-        myObj.startingPosY = 0;
+        myObj.startingPosX = -722;
+        myObj.startingPosY = -9;
         myObj.level = "SampleScene";
         myObj.coins = 0;
 
@@ -70,14 +74,17 @@ public class Player : MonoBehaviour
     myObj.doubleJumpingPowerUpOn = false ;
     myObj.moonGravityPowerUpOn = false;
         Save.SaveData(myObj);
+        SceneManager.LoadScene("SampleScene");
         LoadPlayer();
+        
     }
 
     public void LoadPlayer() {
         Car data = Save.LoadFile();
+        save.data = data;
         
-        transform.position = new Vector3(data.startingPosX, data.startingPosY, 0);
-        
+        transform.position = new Vector2(data.startingPosX, data.startingPosY);
+        Debug.Log("loaded player");
         Coins = data.coins;
 
     powerUps.superDrugPowerUpOn = data.superDrugPowerUpOn;
