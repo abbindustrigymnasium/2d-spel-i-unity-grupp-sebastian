@@ -353,7 +353,7 @@ MonoBehaviour:
   Coins: 0
   Level: 0
   powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
-  killAndRespawn: {fileID: 0}
+  killAndRespawn: {fileID: 8987740185567924316}
   isDead: 1
   savePlayer: 0
 --- !u!70 &-8934455789690884416
