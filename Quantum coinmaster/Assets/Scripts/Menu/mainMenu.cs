@@ -41,7 +41,7 @@ public class Menu : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string currentSceneName = currentScene.name;
         SceneManager.LoadScene(currentSceneName);
-        player.LoadPlayer();
+
     }
     public void mainMenu()
     {

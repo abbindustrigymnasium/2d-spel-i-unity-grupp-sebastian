@@ -828,6 +828,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  save: {fileID: 8066475573962752676, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  saveData:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!114 &7413640616890298135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +851,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!222 &6696288666742072500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -996,6 +1017,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  save: {fileID: 8066475573962752676, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  saveData:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!1 &4527434629650318080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,3 +2862,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dynamicYPos: 0
+  startingPosY: 0

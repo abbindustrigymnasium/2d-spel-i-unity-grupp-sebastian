@@ -22,10 +22,13 @@ public class Car
     public bool invisibilityPowerUpOn;
     public bool doubleJumpingPowerUpOn;
     public bool moonGravityPowerUpOn;
+
+
 }
 public class Save : MonoBehaviour
 {
     public Car data = new Car();
+        public bool loadData = false;
 
     public static void SaveData(Car myObj) {
 
@@ -77,7 +80,10 @@ public class Save : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (loadData) {
+            data = LoadFile();
+            loadData = false;
+        }
     }
 }
 

@@ -1,5 +1,6 @@
 
 
+
 using System.Resources;
 using System.Xml.Linq;
 using System.Collections;
@@ -24,6 +25,10 @@ public class Player : MonoBehaviour
         public bool isDead = false;
 
     public bool savePlayer = false;
+
+    public bool loadPlayer = false;
+
+    public bool savePlayerNow;
     // Start is called before the first frame update
 
     public void Awake()
@@ -54,6 +59,8 @@ public class Player : MonoBehaviour
     myObj.invisibilityPowerUpOn = powerUps.invisibilityPowerUpOn;
     myObj.doubleJumpingPowerUpOn = powerUps.doubleJumpingPowerUpOn;
     myObj.moonGravityPowerUpOn = powerUps.moonGravityPowerUpOn;
+
+Debug.Log(myObj.moonGravityPowerUpOn);
 
         
         Save.SaveData(myObj);
@@ -96,7 +103,7 @@ public class Player : MonoBehaviour
     }
 
     public void CollectCoin() {
-        Coins =+ 1;
+        Coins += 1;
         
     }
 
@@ -108,6 +115,14 @@ public class Player : MonoBehaviour
             Debug.Log("died");
             killAndRespawn.Die();
             isDead = false;
+        }
+        if (loadPlayer) {
+            LoadPlayer();
+            loadPlayer = false;
+        }
+        if (savePlayerNow) {
+            SavePlayer();
+            savePlayerNow = false;
         }
 
 
