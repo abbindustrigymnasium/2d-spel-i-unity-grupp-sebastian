@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3712782815902946467
+--- !u!1001 &86068499097875291
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,17 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3136413354987270681, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -3136413354987270681, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: powerUpId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -702.65137
+      value: -694.66
       objectReference: {fileID: 0}
     - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4377337
+      value: -10.03
       objectReference: {fileID: 0}
     - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.131422
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 168882223181529456, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,9 +64,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 906143987060920870, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 05db7057c560c2c49af4f7e010bb3212, type: 3}
+    - target: {fileID: 6856169318490134703, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6856169318490134703, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8923564683211403175, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
       propertyPath: m_Name
-      value: PowerUpCollectable Variant
+      value: PowerUpCollectable (3) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923564683211403175, guid: e1f24beea0de07c46ae7a61ae3c7e531, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
