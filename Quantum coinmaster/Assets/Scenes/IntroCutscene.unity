@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newLevel: SampleScene
   player: {fileID: 1980756022}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1980756040}
   startingPos: {x: 0, y: 0}
 --- !u!95 &1716346085
 Animator:
@@ -1189,6 +1189,11 @@ MonoBehaviour:
   timelineToPlay: {fileID: 1980756018}
   ScientistAnimator: {fileID: 703584026}
   portalAnimator: {fileID: 1716346085}
+--- !u!4 &1980756040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  m_PrefabInstance: {fileID: 1542882034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5279728812671613700
 PrefabInstance:
   m_ObjectHideFlags: 0
