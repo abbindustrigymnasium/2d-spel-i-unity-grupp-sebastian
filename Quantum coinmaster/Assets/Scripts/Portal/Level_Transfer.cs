@@ -17,11 +17,17 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(newLevel);
             playerTransform.position = startingPos;
             player.SavePlayer();
+            SceneManager.LoadScene(newLevel);
+            
+            
+            
+
         }
 
     }
+
+    public void teleportBack(){}
 
 }

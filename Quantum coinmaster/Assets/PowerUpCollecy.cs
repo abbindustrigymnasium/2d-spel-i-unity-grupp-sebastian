@@ -9,6 +9,7 @@ public class powerUpCollect : MonoBehaviour
 
 public Player player;
 
+    public Dialogue dialogueScript;
 
 
 public int powerUpId = 0;
@@ -26,7 +27,7 @@ public PowerUps powerUp;
           
                
                 
-
+                dialogueScript.StartDialogue();
                 if (powerUpId == 1) {
                     powerUp.superDrugPowerUpOn = true;
                 }

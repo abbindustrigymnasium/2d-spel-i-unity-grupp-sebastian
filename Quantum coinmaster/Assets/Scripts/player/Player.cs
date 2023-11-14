@@ -1,6 +1,4 @@
 
-
-
 using System.Resources;
 using System.Xml.Linq;
 using System.Collections;

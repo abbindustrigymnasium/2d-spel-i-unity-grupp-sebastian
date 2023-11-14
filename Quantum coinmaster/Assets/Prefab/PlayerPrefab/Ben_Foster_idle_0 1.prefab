@@ -143,7 +143,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -296,8 +296,8 @@ MonoBehaviour:
   isSliding: 1
   canWalk: 1
   canJump: 1
-  speed: 72
-  jumpingPower: 14
+  speed: 8
+  jumpingPower: 12
   slideSpeed: 2
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}
@@ -342,7 +342,7 @@ MonoBehaviour:
     startingPosX: -278.3631
     startingPosY: 32.729576
     coins: 1
-    level: Edwardian_Scene
+    level: Scene_Moon2
     superDrugPowerUpOn: 1
     flyingPowerUpOn: 1
     invisibilityPowerUpOn: 1
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 1
+  Coins: 2
   Level: 0
   powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
   save: {fileID: 8066475573962752676}
