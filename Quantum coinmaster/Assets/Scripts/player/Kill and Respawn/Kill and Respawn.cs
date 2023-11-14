@@ -42,24 +42,13 @@ public class KillAndRespawn : MonoBehaviour
             else {
                 playerTeleport.Teleport();
             }
-           
-           
-
-           
-
-            //Remove this part once animation is here!!
-            //RestartLevel();
         }
 
     }
-
     public void Die()
     {
-
         rb.bodyType = RigidbodyType2D.Static;
-        
         anim.SetTrigger("death");
-
     }
 
     private void RestartLevel()
