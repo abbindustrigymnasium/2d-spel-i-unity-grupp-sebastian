@@ -205,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.3481
+      value: -712.81586
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.608703
+      value: -3.8087025
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.z
@@ -246,10 +246,14 @@ PrefabInstance:
     - target: {fileID: 3085123612728058401, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 240048124}
+      objectReference: {fileID: 0}
     - target: {fileID: 3085123612728058401, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LookAt
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085123612728058401, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -334,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 240048122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -713.2, y: -10.1, z: 0}
+  m_LocalPosition: {x: -713.2, y: -4.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,12 +410,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.3481
+      value: -712.81586
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.608703
+      value: -3.8087025
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.z
@@ -444,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: orthographic size
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8653693910685389994, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_Name
@@ -862,11 +878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -688
+      value: -721.81
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.8
+      value: -10.03
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -910,12 +926,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120548575565125318, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9120548575565125318, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 90ececffab188e54fbc9cf26314091a2, type: 3}
+      objectReference: {fileID: 21300000, guid: 2528ee8c0bcded94496a1da00dd951b4, type: 3}
     - target: {fileID: 9120548575565125318, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -1256,14 +1272,14 @@ PrefabInstance:
     - target: {fileID: 3456737642511848015, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c8ffb757e60533e408e6e67b22f41533, type: 3}
+      objectReference: {fileID: 21300000, guid: 7738943795ef66e4eaa3b9143e37d169, type: 3}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: useIntro
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: chosenIndex
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: IntroCutscene
@@ -1271,11 +1287,41 @@ PrefabInstance:
       objectReference: {fileID: 1980756030}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: dialogues.Array.size
-      value: 4
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: Finally, it's complete.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: The pinnacle of scientific innovation, my time machine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: Behold, the mathematical marvels and physical paradoxes it unveils.
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: dialogues.Array.data[3]
-      value: IT WORKS!
+      value: You see, time is a tapestry, and these coins scattered across its threads
+        hold the key to unlocking the secrets of the ages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: The first lies lost in Edwardian London, awaiting your retrieval.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: Now, brace yourself for the temporal journey, and remember, it's all
+        about the delicate dance between equations and the enigma of existence.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[6]
+      value: Witness the culmination of my work... it works!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[7]
+      value: Witness the culmination of my work... it works!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
