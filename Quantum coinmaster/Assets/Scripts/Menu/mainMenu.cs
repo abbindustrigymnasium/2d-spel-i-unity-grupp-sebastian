@@ -55,9 +55,9 @@ public class Menu : MonoBehaviour
 
     void update()
     {
-        if (Input.GetKeyDown("enter"))
+       /* if (Input.GetKeyDown("enter"))
         {
             PlayGame();
-        }
+        } */
     }
 }
