@@ -9,19 +9,25 @@ public class NewBehaviourScript : MonoBehaviour
 
     public Player player;
 
-    public Transform playerTransform;
 
+    public Transform playerTransform;
     public Vector2 startingPos;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(newLevel);
             playerTransform.position = startingPos;
             player.SavePlayer();
+            SceneManager.LoadScene(newLevel);
+            
+            
+            
+
         }
 
     }
+
+    public void teleportBack(){}
 
 }

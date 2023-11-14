@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
   dialogueScript: {fileID: 6543840873896747604}
+  removeCode: 0
 --- !u!1001 &9206863363933130861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,11 +179,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -130.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.z

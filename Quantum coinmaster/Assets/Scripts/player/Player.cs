@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public PowerUps powerUps;
 
+    public Save save;
+
     private bool loaded;
 
     public KillAndRespawn killAndRespawn;
@@ -21,6 +23,10 @@ public class Player : MonoBehaviour
         public bool isDead = false;
 
     public bool savePlayer = false;
+
+    public bool loadPlayer = false;
+
+    public bool savePlayerNow;
     // Start is called before the first frame update
 
     public void Awake()
@@ -43,6 +49,7 @@ public class Player : MonoBehaviour
         myObj.startingPosX = transform.position.x;
         myObj.startingPosY = transform.position.y;
         myObj.level = SceneManager.GetActiveScene().name;
+
         myObj.coins = Coins;
 
     myObj.superDrugPowerUpOn = powerUps.superDrugPowerUpOn;
@@ -51,15 +58,17 @@ public class Player : MonoBehaviour
     myObj.doubleJumpingPowerUpOn = powerUps.doubleJumpingPowerUpOn;
     myObj.moonGravityPowerUpOn = powerUps.moonGravityPowerUpOn;
 
+Debug.Log(myObj.moonGravityPowerUpOn);
 
+        
         Save.SaveData(myObj);
-
+        save.data = Save.LoadFile();
     }
 
     public void StartOver() {
                 Car myObj = new Car();
-        myObj.startingPosX = 0;
-        myObj.startingPosY = 0;
+        myObj.startingPosX = -722;
+        myObj.startingPosY = -9;
         myObj.level = "SampleScene";
         myObj.coins = 0;
 
@@ -70,14 +79,17 @@ public class Player : MonoBehaviour
     myObj.doubleJumpingPowerUpOn = false ;
     myObj.moonGravityPowerUpOn = false;
         Save.SaveData(myObj);
+        SceneManager.LoadScene("SampleScene");
         LoadPlayer();
+        
     }
 
     public void LoadPlayer() {
         Car data = Save.LoadFile();
+        save.data = data;
         
-        transform.position = new Vector3(data.startingPosX, data.startingPosY, 0);
-        
+        transform.position = new Vector2(data.startingPosX, data.startingPosY);
+        Debug.Log("loaded player");
         Coins = data.coins;
 
     powerUps.superDrugPowerUpOn = data.superDrugPowerUpOn;
@@ -89,7 +101,7 @@ public class Player : MonoBehaviour
     }
 
     public void CollectCoin() {
-        Coins =+ 1;
+        Coins += 1;
         
     }
 
@@ -101,6 +113,14 @@ public class Player : MonoBehaviour
             Debug.Log("died");
             killAndRespawn.Die();
             isDead = false;
+        }
+        if (loadPlayer) {
+            LoadPlayer();
+            loadPlayer = false;
+        }
+        if (savePlayerNow) {
+            SavePlayer();
+            savePlayerNow = false;
         }
 
 

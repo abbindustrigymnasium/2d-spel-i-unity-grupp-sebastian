@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using System;
 
@@ -8,8 +9,10 @@ public class CoinMovement : MonoBehaviour
     public bool dynamicYPos = true;
     private float testValue = 0f;
 
-    void start() {
+    public float startingPosY;
 
+    void start() {
+        float startingPosY = transform.position.y;
     }
 
     void FixedUpdate()
@@ -17,7 +20,7 @@ public class CoinMovement : MonoBehaviour
 
         testValue += 1;
 
-        float positionY = (float)Math.Sin(testValue/10);
+        float positionY = ((float)Math.Sin(testValue/10))/10+transform.position.y;
 
 
 

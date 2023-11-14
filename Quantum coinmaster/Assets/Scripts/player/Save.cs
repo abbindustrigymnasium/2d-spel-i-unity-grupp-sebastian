@@ -16,16 +16,19 @@ public class Car
 
     public int coins = 0;
 
-    public string level = "";
-    public bool superDrugPowerUpOn = true;
-    public bool flyingPowerUpOn = true;
-    public bool invisibilityPowerUpOn = true;
-    public bool doubleJumpingPowerUpOn = true;
-    public bool moonGravityPowerUpOn = true;
+    public string level = "SampleScene";
+    public bool superDrugPowerUpOn;
+    public bool flyingPowerUpOn;
+    public bool invisibilityPowerUpOn;
+    public bool doubleJumpingPowerUpOn;
+    public bool moonGravityPowerUpOn;
+
+
 }
 public class Save : MonoBehaviour
 {
-
+    public Car data = new Car();
+        public bool loadData = false;
 
     public static void SaveData(Car myObj) {
 
@@ -44,7 +47,7 @@ public class Save : MonoBehaviour
     public void Start()
     {
 
-        Car data = LoadFile();
+        data = LoadFile();
         Debug.Log(data.startingPosY);
 
     }
@@ -73,10 +76,14 @@ public class Save : MonoBehaviour
 
 
 
+
     // Update is called once per frame
     void Update()
     {
-
+        if (loadData) {
+            data = LoadFile();
+            loadData = false;
+        }
     }
 }
 

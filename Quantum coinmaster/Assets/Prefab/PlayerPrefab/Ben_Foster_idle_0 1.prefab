@@ -67,6 +67,7 @@ Transform:
   m_GameObject: {fileID: 3409722532995306826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -278.3631, y: 32.729576, z: 0}
   m_LocalPosition: {x: -722, y: -9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
@@ -143,7 +144,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -297,7 +298,7 @@ MonoBehaviour:
   canWalk: 1
   canJump: 1
   speed: 8
-  jumpingPower: 14
+  jumpingPower: 12
   slideSpeed: 2
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}
@@ -338,6 +339,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    startingPosX: -278.3631
+    startingPosY: 32.729576
+    coins: 1
+    level: Scene_Moon2
+    superDrugPowerUpOn: 1
+    flyingPowerUpOn: 1
+    invisibilityPowerUpOn: 1
+    doubleJumpingPowerUpOn: 1
+    moonGravityPowerUpOn: 1
+  loadData: 0
 --- !u!114 &-1848727525492962502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,12 +362,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  Coins: 2
   Level: 0
   powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
+  save: {fileID: 8066475573962752676}
   killAndRespawn: {fileID: 8987740185567924316}
-  isDead: 1
+  isDead: 0
   savePlayer: 0
+  loadPlayer: 0
+  savePlayerNow: 0
 --- !u!70 &-8934455789690884416
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

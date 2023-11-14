@@ -482,7 +482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &329792215
 Transform:
   m_ObjectHideFlags: 0
@@ -513,6 +513,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccad25482726db4b854357bc3f816f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  save: {fileID: 0}
+  saveData:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: 
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!1 &342883241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2253,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254565241}
   m_CullTransparentMesh: 1
+--- !u!1 &1420821280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420821282}
+  - component: {fileID: 1420821281}
+  m_Layer: 0
+  m_Name: playerEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1420821281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420821280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins: 0
+  Level: 0
+  powerUps: {fileID: 2059131423}
+  killAndRespawn: {fileID: 0}
+  isDead: 0
+  savePlayer: 0
+--- !u!4 &1420821282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420821280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 585.1582, y: 275.80496, z: 0.819458}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482530851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,22 +2386,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 329792214}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2059131418}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2059131420}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3116,6 +3166,7 @@ GameObject:
   - component: {fileID: 1827513509}
   - component: {fileID: 1827513511}
   - component: {fileID: 1827513510}
+  - component: {fileID: 1827513512}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3136,9 +3187,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 532368723}
-  - {fileID: 2059131419}
   - {fileID: 329792215}
   - {fileID: 559117113}
+  - {fileID: 2059131419}
   m_Father: {fileID: 966201250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3184,6 +3235,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827513508}
   m_CullTransparentMesh: 1
+--- !u!114 &1827513512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827513508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: 
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!1 &1838180334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,7 +3538,7 @@ GameObject:
   - component: {fileID: 2024776514}
   - component: {fileID: 2024776513}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: NewGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3536,12 +3609,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2059131420}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3596,13 +3681,14 @@ GameObject:
   - component: {fileID: 2059131419}
   - component: {fileID: 2059131420}
   - component: {fileID: 2059131421}
+  - component: {fileID: 2059131423}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2059131419
 Transform:
   m_ObjectHideFlags: 0
@@ -3612,7 +3698,7 @@ Transform:
   m_GameObject: {fileID: 2059131418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 90.25151, z: 112.56724}
+  m_LocalPosition: {x: 0, y: 90.251526, z: 112.56724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3634,6 +3720,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccad25482726db4b854357bc3f816f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1420821281}
+  save: {fileID: 2059131421}
+  saveData:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!114 &2059131421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3646,6 +3744,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
+--- !u!114 &2059131423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059131418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec93476560ce2124b877e5293779acd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  superDrugPowerUpOn: 0
+  flyingPowerUpOn: 0
+  invisibilityPowerUpOn: 0
+  doubleJumpingPowerUpOn: 0
+  moonGravityPowerUpOn: 0
+  cooldownDuration: 20
+  powerUpDuration:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  isActivePowerUp: 0
+  movement: {fileID: 0}
+  killAndRespawn: {fileID: 0}
+  speedMultiplier: 1
+  powerUpBackground: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  iconColor: {r: 0, g: 0, b: 0, a: 0}
+  activeIconColor: {r: 0, g: 0, b: 0, a: 0}
+  a: 0.1
+  superDrugIconMovement: {fileID: 0}
+  invinsibilityIconMovement: {fileID: 0}
+  doubleJumpIconMovement: {fileID: 0}
+  moonGravityIconMovement: {fileID: 0}
+  flyingIconMovement: {fileID: 0}
+  playerTeleport: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3653,3 +3800,4 @@ SceneRoots:
   - {fileID: 921757653}
   - {fileID: 966201250}
   - {fileID: 607374460}
+  - {fileID: 1420821282}

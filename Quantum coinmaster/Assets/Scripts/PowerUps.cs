@@ -57,11 +57,7 @@ public class PowerUps : MonoBehaviour
 
     public void Start()
     {
-        superDrugIconMovement.GameObjectVisibility(superDrugPowerUpOn);
-        invinsibilityIconMovement.GameObjectVisibility(invisibilityPowerUpOn);
-        doubleJumpIconMovement.GameObjectVisibility(doubleJumpingPowerUpOn);
-        moonGravityIconMovement.GameObjectVisibility(moonGravityPowerUpOn);
-        flyingIconMovement.GameObjectVisibility(flyingPowerUpOn);
+
     }
 
     // Update is called once per frame
@@ -69,7 +65,11 @@ public class PowerUps : MonoBehaviour
 
     {
         //Debug.Log(speed);
-        
+        superDrugIconMovement.GameObjectVisibility(superDrugPowerUpOn);
+        invinsibilityIconMovement.GameObjectVisibility(invisibilityPowerUpOn);
+        doubleJumpIconMovement.GameObjectVisibility(doubleJumpingPowerUpOn);
+        moonGravityIconMovement.GameObjectVisibility(moonGravityPowerUpOn);
+        flyingIconMovement.GameObjectVisibility(flyingPowerUpOn);
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
