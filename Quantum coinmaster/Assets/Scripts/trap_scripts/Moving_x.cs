@@ -34,6 +34,10 @@ public class Moving_x : MonoBehaviour
             if (trap.position.x > xRight)
             {
                 goingLeft = true;
+                Vector3 currentScale = transform.localScale;
+
+                // Flip the object along the X-axis by negating the X-scale
+                transform.localScale = new Vector3(-currentScale.x, currentScale.y, currentScale.z);
             }
         }
         else if (trap.position.x > xLeft - speed && goingLeft) // Typo fix: goingUp instead of going
@@ -42,6 +46,10 @@ public class Moving_x : MonoBehaviour
             if (trap.position.x < xLeft)
             {
                 goingLeft = false;
+                Vector3 currentScale = transform.localScale;
+
+                // Flip the object along the X-axis by negating the X-scale
+                transform.localScale = new Vector3(-currentScale.x, currentScale.y, currentScale.z);
             }
         }
         if (realSpeed != 0)
