@@ -35280,6 +35280,18 @@ PrefabInstance:
       propertyPath: killAndRespawn
       value: 
       objectReference: {fileID: 2129296833}
+    - target: {fileID: -1586408764620190295, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1586408764620190295, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a76264293b700ba4b9ef5c1b03184e61, type: 3}
+    - target: {fileID: -1586408764620190295, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: speed
       value: 8

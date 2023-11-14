@@ -26,6 +26,7 @@ public bool isCoinCollected = false;
                 Destroy(gameObject);
                 isCoinCollected = true;
                 player.CollectCoin();
+                FindObjectOfType<AudioManager>().Play("coinCollect");
             }
             
 

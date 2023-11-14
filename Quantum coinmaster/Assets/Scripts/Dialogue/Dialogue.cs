@@ -37,6 +37,7 @@ public class Dialogue : MonoBehaviour
     private void retrieveDialogue(int i){
         // the index is changed to dialogue i
         index = i;
+        FindObjectOfType<AudioManager>().Play("talking");
         // charindex, start new sentence
         charIndex = 0;
         // empty the dialogue
@@ -70,6 +71,7 @@ public class Dialogue : MonoBehaviour
         if(waitForNext && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))){
             waitForNext = false;
             index++;
+
             if(index < dialogues.Count){
                 retrieveDialogue(index);
             }else{
