@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -718.5245
+      value: -718.4622
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -566,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 109811587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -609.47, y: -1.7, z: 5}
+  m_LocalPosition: {x: -609.47, y: -1.7, z: 5.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68469,6 +68469,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: m_Name
+      value: coin (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5505060724008476947, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_Name
       value: meat_stand (2)
@@ -68512,14 +68520,6 @@ PrefabInstance:
     - target: {fileID: 7481668998594673391, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: m_Name
-      value: coin (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5544419579550383254, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
@@ -69139,7 +69139,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -718.5245
+      value: -718.4622
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -75304,7 +75304,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83125,6 +83125,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: m_Name
+      value: coin (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5505060724008476947, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_Name
       value: meat_stand (3)
@@ -83168,14 +83176,6 @@ PrefabInstance:
     - target: {fileID: 7481668998594673391, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: m_Name
-      value: coin (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5544419579550383254, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
@@ -84123,6 +84123,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
+      propertyPath: m_Name
+      value: coin (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5505060724008476947, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_Name
       value: meat_stand (4)
@@ -84166,14 +84174,6 @@ PrefabInstance:
     - target: {fileID: 7481668998594673391, guid: 3ab796eba49846545bf6c0c3f1475ba1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492754288809929873, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293386910139480102, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
-      propertyPath: m_Name
-      value: coin (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5544419579550383254, guid: eccfac067ac3e7e42b209c0706842485, type: 3}
@@ -85002,17 +85002,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2fa5b4d946e21d40bcd1bc2185ff6f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1542882043 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
-  m_PrefabInstance: {fileID: 1542882034}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3626d071ec70f746b374f3f6130ed28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1556193142 stripped
@@ -86325,17 +86314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713cf2b52fc998644951e506728d3fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2022337449 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
-  m_PrefabInstance: {fileID: 1542882034}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3626d071ec70f746b374f3f6130ed28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2022337451 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8066475573962752676, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
@@ -86454,7 +86432,7 @@ PrefabInstance:
     - target: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
       propertyPath: movement
       value: 
-      objectReference: {fileID: 2022337449}
+      objectReference: {fileID: 0}
     - target: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
       propertyPath: killAndRespawn
       value: 
@@ -87166,3 +87144,5 @@ SceneRoots:
   - {fileID: 879591203}
   - {fileID: 333140939}
   - {fileID: 1936955321}
+  - {fileID: 1087468390}
+  - {fileID: 109811590}
