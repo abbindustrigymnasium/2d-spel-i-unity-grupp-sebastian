@@ -283,6 +283,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &955857981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955857984}
+  - component: {fileID: 955857983}
+  - component: {fileID: 955857982}
+  m_Layer: 0
+  m_Name: fakePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &955857982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955857981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    startingPosX: -2.4
+    startingPosY: 5.6
+    coins: 0
+    level: Scene_CP1
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
+  loadData: 0
+--- !u!114 &955857983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955857981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins: 0
+  Level: 0
+  powerUps: {fileID: 0}
+  save: {fileID: 0}
+  killAndRespawn: {fileID: 0}
+  isDead: 0
+  savePlayer: 0
+  loadPlayer: 0
+  savePlayerNow: 0
+--- !u!4 &955857984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955857981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 420.2703, y: -164.22017, z: -4.9361925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &637502718408357811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,6 +368,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 318400608058408788, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189562341113217813, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NewGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189562341113217813, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1938927014415118809, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -371,10 +460,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2101957531429524686, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: m_Name
+      value: NewGameButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2524337173169456671, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3379863269248097867, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700074198933057464, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 955857982}
+    - target: {fileID: 4700074198933057464, guid: ad0c0ac0e3c9bf5408090ef120c08f76, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 955857983}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -387,3 +492,4 @@ SceneRoots:
   - {fileID: 921757653}
   - {fileID: 637502718408357811}
   - {fileID: 607374460}
+  - {fileID: 955857984}
