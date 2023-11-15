@@ -951,17 +951,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1980756030}
   m_SourcePrefab: {fileID: 100100000, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
---- !u!114 &1542882035 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
-  m_PrefabInstance: {fileID: 1542882034}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980756017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1716346080
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,9 +962,9 @@ GameObject:
   - component: {fileID: 1716346083}
   - component: {fileID: 1716346082}
   - component: {fileID: 1716346081}
+  - component: {fileID: 1716346084}
   - component: {fileID: 1716346085}
   - component: {fileID: 1716346086}
-  - component: {fileID: 1716346087}
   m_Layer: 0
   m_Name: portal
   m_TagString: Untagged
@@ -1095,6 +1084,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716346084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716346080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9948729c24d22c54695c88d760ee8b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLevel: SampleScene
+  player: {fileID: 1980756022}
+  playerTransform: {fileID: 1980756040}
+  startingPos: {x: 0, y: 0}
 --- !u!95 &1716346085
 Animator:
   serializedVersion: 5
@@ -1131,19 +1136,6 @@ MonoBehaviour:
   timelineToPlay: {fileID: 1980756018}
   ScientistAnimator: {fileID: 703584026}
   portalAnimator: {fileID: 1716346085}
---- !u!114 &1716346087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716346080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 275ea7631dd468e4188800e375121391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1542882035}
 --- !u!1 &1980756017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3409722532995306826, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
@@ -1170,6 +1162,17 @@ PlayableDirector:
     value: {fileID: 1980756024}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &1980756022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  m_PrefabInstance: {fileID: 1542882034}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980756017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1980756024 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: -5859886204373733447, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
@@ -1190,6 +1193,11 @@ MonoBehaviour:
   timelineToPlay: {fileID: 1980756018}
   ScientistAnimator: {fileID: 703584026}
   portalAnimator: {fileID: 1716346085}
+--- !u!4 &1980756040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  m_PrefabInstance: {fileID: 1542882034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5279728812671613700
 PrefabInstance:
   m_ObjectHideFlags: 0
