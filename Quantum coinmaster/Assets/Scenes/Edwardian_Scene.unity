@@ -87023,7 +87023,7 @@ PrefabInstance:
       objectReference: {fileID: 2055206702}
     - target: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: savePlayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: savePlayerNow
@@ -87493,7 +87493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2661822974880509453, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: m_Name
-      value: nobles (1)
+      value: ladies
       objectReference: {fileID: 0}
     - target: {fileID: 3723348878611384455, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -87511,6 +87511,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 433b20424a9216c41a52e2c622db8cf7, type: 2}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1542882035}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.size
       value: 5
@@ -89496,6 +89500,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b16c4dc5951716e49bc6447f56b426af, type: 2}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1542882035}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.size
       value: 5
