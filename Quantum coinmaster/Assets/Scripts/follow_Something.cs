@@ -25,5 +25,11 @@ public class follow_Something : MonoBehaviour
         Vector3 targetPosition = new Vector3(thing_to_Follow.position.x - thing_to_Follow.position.x * xSpeed + xStart, 0f - thing_to_Follow.position.y * ySpeed, follower.position.z);
 
         follower.position = targetPosition;
+
+        if (gameObject.CompareTag("trap"))
+        {
+            Vector3 currentScale = thing_to_Follow.localScale;
+            transform.localScale = new Vector3(currentScale.x, currentScale.y, currentScale.z);
+        }
     }
 }

@@ -11,6 +11,9 @@ public class Dialogue : MonoBehaviour
     public float writingSpeed;
 
     public Player player;
+    public BenTimeLine_Lab IntroCutscene;
+    public bool useIntro;
+    public int chosenIndex;
 
     private AudioSource source;
 
@@ -82,13 +85,59 @@ public class Dialogue : MonoBehaviour
             index++;
 
             if(index < dialogues.Count){
+                if(useIntro && index == chosenIndex){
+                    IntroCutscene.AnimateScientist();
+                }
                 retrieveDialogue(index);
             }else{
                 EndDialogue();
                 source.Stop();
                 
 
+                if(useIntro){
+                    IntroCutscene.AnimatePortal();
+                    IntroCutscene.PlayTimeline();
+                }
             }
+        }
+    }
+
+        public void FadeOutAudio()
+    {
+
+            StartCoroutine(FadeOut());
+
+    }
+
+    // Coroutine for fading out the audio
+    private System.Collections.IEnumerator FadeOut()
+    {
+        float startVolume = source.volume;
+
+        while (source.volume > 0)
+        {
+            source.volume -= startVolume * Time.deltaTime / fadeOutTime;
+
+            yield return null;
+        }
+
+        // Make sure the volume is set to 0 after fading out
+        source.volume = 0;
+
+        // Stop the audio after fading out
+        source.Stop();
+        source.volume = 1;
+    }
+
+        private void PlayAudioFromRandomPoint()
+    {
+        if (source != null)
+        {
+            // Set the time to a random point within the audio clip length
+            source.time = Random.Range(0, source.clip.length);
+
+            // Play the audio
+            source.Play();
         }
     }
 

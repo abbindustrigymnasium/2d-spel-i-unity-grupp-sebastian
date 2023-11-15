@@ -21,10 +21,6 @@ public class NewBehaviourScript : MonoBehaviour
             player.SavePlayer();
             
             SceneManager.LoadScene(newLevel);
-            
-            
-            
-
         }
 
     }
