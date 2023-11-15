@@ -12,10 +12,14 @@ public class Dialogue : MonoBehaviour
 
     public Player player;
 
+    private AudioSource source;
+
     private int index;
     private int charIndex;
     private bool started;
     private bool waitForNext;
+
+    public float fadeOutTime = 0.1f;
     private void ToggleWindow(bool show){
         window.SetActive(show);
     }
@@ -25,6 +29,7 @@ public class Dialogue : MonoBehaviour
     private void Awake(){
         ToggleWindow(false);
         ToggleIndicator(false);
+        source = GetComponent<AudioSource>();
     }
     public void StartDialogue(){
         if(started)
@@ -37,7 +42,9 @@ public class Dialogue : MonoBehaviour
     private void retrieveDialogue(int i){
         // the index is changed to dialogue i
         index = i;
-        FindObjectOfType<AudioManager>().Play("talking");
+        StopCoroutine( FadeOut());
+        source.volume = 1;
+        PlayAudioFromRandomPoint();
         // charindex, start new sentence
         charIndex = 0;
         // empty the dialogue
@@ -64,6 +71,8 @@ public class Dialogue : MonoBehaviour
             StartCoroutine(Writing());
         }else{
             waitForNext = true;
+            source.Stop();
+            
         }
     }
     private void Update()
@@ -76,9 +85,49 @@ public class Dialogue : MonoBehaviour
                 retrieveDialogue(index);
             }else{
                 EndDialogue();
+                source.Stop();
                 
 
             }
+        }
+    }
+
+        public void FadeOutAudio()
+    {
+
+            StartCoroutine(FadeOut());
+
+    }
+
+    // Coroutine for fading out the audio
+    private System.Collections.IEnumerator FadeOut()
+    {
+        float startVolume = source.volume;
+
+        while (source.volume > 0)
+        {
+            source.volume -= startVolume * Time.deltaTime / fadeOutTime;
+
+            yield return null;
+        }
+
+        // Make sure the volume is set to 0 after fading out
+        source.volume = 0;
+
+        // Stop the audio after fading out
+        source.Stop();
+        source.volume = 1;
+    }
+
+        private void PlayAudioFromRandomPoint()
+    {
+        if (source != null)
+        {
+            // Set the time to a random point within the audio clip length
+            source.time = Random.Range(0, source.clip.length);
+
+            // Play the audio
+            source.Play();
         }
     }
 }

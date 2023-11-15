@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2102156296643588504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7418588481225958333}
+  - component: {fileID: 8622193457154771806}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7418588481225958333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102156296643588504}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5583496, y: 6.0501285, z: 31.366238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8622193457154771806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102156296643588504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361d6df2f1eb355468c4d8eee95ef0ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 10
+  sounds:
+  - clip: {fileID: 8300000, guid: a76264293b700ba4b9ef5c1b03184e61, type: 3}
+    name: Theme
+    volume: 0.679
+    pitch: 1.65
+    loop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 0}
+    name: test
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8c88b568f5cd51944b5b196fd2155186, type: 3}
+    name: coinCollect
+    volume: 0.592
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0e5302d9af4378549adb20b47d921cc8, type: 3}
+    name: talking
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 9301188b061dcda4aab6351084728c5c, type: 3}
+    name: ambientSound1
+    volume: 0.549
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b5a1448cf8a42764abf7817b2d2cfd23, type: 3}
+    name: ambientSound2
+    volume: 0.524
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a515cebbac4d49c4dad9e01add440d18, type: 3}
+    name: ambientSound3
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 29b7fdb209e694740b1b429cc19a72b6, type: 3}
+    name: death
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 562692cefca8a064997ea403b1647e9b, type: 3}
+    name: slide
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 7eaefeb7d8f42544e8f1ee20921ab5bf, type: 3}
+    name: slide2
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 993f41c2931866f4989bf0fa6cc8f897, type: 3}
+    name: groundHit
+    volume: 0.489
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 22c3478d1234f0a4480ec0bb01443ec7, type: 3}
+    name: click
+    volume: 0.495
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}

@@ -177,13 +177,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6576355163339867060}
     m_Modifications:
+    - target: {fileID: 2163164565001492348, guid: 507099475078c274c81afa63468188c9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+    - target: {fileID: 5996986041265279927, guid: 507099475078c274c81afa63468188c9, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996986041265279927, guid: 507099475078c274c81afa63468188c9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e5302d9af4378549adb20b47d921cc8, type: 3}
+    - target: {fileID: 5996986041265279927, guid: 507099475078c274c81afa63468188c9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996986041265279927, guid: 507099475078c274c81afa63468188c9, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -221,7 +241,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2163164565001492348, guid: 507099475078c274c81afa63468188c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -251,8 +272,9 @@ MonoBehaviour:
   dialogues:
   - Sucessfully saved!
   dialogueText: {fileID: 6391217316585209185}
-  writingSpeed: 0
+  writingSpeed: 0.03
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  fadeOutTime: 0.1
 --- !u!4 &2121826351968732745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}

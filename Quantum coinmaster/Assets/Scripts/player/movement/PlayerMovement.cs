@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public bool play = true;
     public PowerUps powerUps;
 
     public float test = 8;
@@ -138,6 +139,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 doubleJump = !doubleJump;
+
+
+
             }
             if (context.canceled && rb.velocity.y > 0f)
             {
@@ -162,6 +166,8 @@ public class PlayerMovement : MonoBehaviour
         canWalk = false;
         canJump = false;
         isSliding = true;
+        FindObjectOfType<AudioManager>().Play("slide");
+                FindObjectOfType<AudioManager>().Play("slide2");
 
         if (originalSlideSpeed == slideSpeed)
         {
@@ -195,4 +201,24 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
         slideSpeed = originalSlideSpeed;
     }
+
+
+
+    void Update()
+    {
+        
+
+
+        if (isGrounded() && play) {
+            FindObjectOfType<AudioManager>().Play("groundHit");
+            play = false;
+        }
+
+        if (!isGrounded() && !play) {
+            play = true;
+        
+    }
+
+}
+
 }

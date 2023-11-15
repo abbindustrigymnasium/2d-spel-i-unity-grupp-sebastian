@@ -11,6 +11,8 @@ public class Trap_Moving : MonoBehaviour
     public float yBottom;
     public float yTop;
 
+    public AudioSource source;
+
     private bool goingUp = false;
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class Trap_Moving : MonoBehaviour
             if (trap.position.y < yBottom)
             {
                 goingUp = true;
+                source.Play();
             }
         }
         else if (trap.position.y < yTop + speed && goingUp) // Typo fix: goingUp instead of going

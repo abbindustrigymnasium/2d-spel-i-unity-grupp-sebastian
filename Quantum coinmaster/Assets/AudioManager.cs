@@ -9,6 +9,7 @@ using UnityEngine.Audio;
 public class Sound {
     public AudioClip clip;
 
+
     public string name;
 
     [Range(0f, 1f)]
@@ -25,8 +26,11 @@ public class Sound {
 public class AudioManager : MonoBehaviour
 {
     // Start is called before the first frame update
+            public float fadeInTime = 100f;
 
     public Sound[] sounds;
+
+
 
     void Awake()
     {
@@ -52,14 +56,53 @@ public class AudioManager : MonoBehaviour
 
         s.source.Stop();
     }
+
+    public void FadeInAudio(string name)
+    {
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+        if (s.source != null)
+        {
+            // Set the initial volume to 0
+            float targetVolume = s.volume;
+            s.source.volume = 0;
+            s.volume = 0;
+
+            // Start playing the audio
+            s.source.Play();
+
+            // Start a coroutine for fading in the audio
+            StartCoroutine(FadeIn(s, targetVolume));
+        }
+    }
+
+    // Coroutine for fading in the audio
+    private System.Collections.IEnumerator FadeIn(Sound s, float targetVolume)
+    {
+
+        while (s.source.volume < targetVolume)
+        {
+            s.source.volume += (Time.deltaTime/fadeInTime);
+            s.volume += (Time.deltaTime/fadeInTime);
+            yield return null;
+        }
+
+        // Make sure the volume is set to the target volume after fading in
+        s.source.volume = targetVolume;
+    }
+
+
+    public void click() {
+        Play("click");
+    }
+
     void Start()
     {
-        Play("Theme");
-        Play("ambientSound1");
-        Play("ambientSound2");
-                Play("ambientSound3");
-                Play("ambientSound4");
-                Play("ambientSound5");
+        FadeInAudio("Theme");
+        FadeInAudio("ambientSound1");
+        FadeInAudio("ambientSound2");
+                FadeInAudio("ambientSound3");
+                FadeInAudio("ambientSound4");
+                FadeInAudio("ambientSound5");
     }
 
     // Update is called once per frame

@@ -145,6 +145,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8622193457154771806, guid: aec121bb06c2e3640a274de5dd5fd90b, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &740145336496316637
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +281,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6075983485034339398}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: mainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8622193457154771806, guid: aec121bb06c2e3640a274de5dd5fd90b, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -919,6 +943,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  save: {fileID: 0}
+  saveData:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
 --- !u!114 &1233165965513093520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +966,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd0c9d96b058e54ca8e4d31aa621954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    startingPosX: 5
+    startingPosY: 100
+    coins: 0
+    level: SampleScene
+    superDrugPowerUpOn: 0
+    flyingPowerUpOn: 0
+    invisibilityPowerUpOn: 0
+    doubleJumpingPowerUpOn: 0
+    moonGravityPowerUpOn: 0
+  loadData: 0
 --- !u!222 &4522608379478101353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1540,6 +1586,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2102156296643588504, guid: aec121bb06c2e3640a274de5dd5fd90b, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4587256053904251610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,6 +1854,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2102156296643588504, guid: aec121bb06c2e3640a274de5dd5fd90b, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
