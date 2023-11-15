@@ -69,7 +69,7 @@ Debug.Log(myObj.moonGravityPowerUpOn);
                 Car myObj = new Car();
         myObj.startingPosX = -722;
         myObj.startingPosY = -9;
-        myObj.level = "SampleScene";
+        myObj.level = "IntroCutScene";
         myObj.coins = 0;
 
 
@@ -79,7 +79,7 @@ Debug.Log(myObj.moonGravityPowerUpOn);
     myObj.doubleJumpingPowerUpOn = false ;
     myObj.moonGravityPowerUpOn = false;
         Save.SaveData(myObj);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(myObj.level);
         LoadPlayer();
         
     }

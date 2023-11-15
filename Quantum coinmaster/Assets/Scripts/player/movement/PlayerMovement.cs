@@ -38,10 +38,10 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider2D boxColl;
 
     public bool doubleJumpOn = false;
-
+    private float horizontalAxis;
     public float jumpForce = 500.0f;
     public Moving_x moving_x;
-
+    private bool activateRunningAnim = true;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       
+       horizontalAxis = Input.GetAxis("Horizontal");
         //Debug.Log(speed);
         if (rb.bodyType == RigidbodyType2D.Static)
         { // används för att reseta animationerna vid spelardöd
@@ -71,7 +71,11 @@ public class PlayerMovement : MonoBehaviour
         else
         { // om dynamisk rigidbody -> spelare lever
             animator.SetBool("isSliding", isSliding);
-            animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            if(activateRunningAnim || Math.Abs(horizontalAxis)!=0){
+                animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+            } else{
+                animator.SetFloat("xVelocity", 0);
+            }
             animator.SetFloat("yVelocity", rb.velocity.y);
             rb.velocity = new Vector2(horizontal * speed + moving_x.realSpeed, rb.velocity.y);
             if (isSliding == true)
@@ -105,6 +109,15 @@ public class PlayerMovement : MonoBehaviour
                     Flip();
                 }
             }
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other){
+        if (other.gameObject.CompareTag("car"))
+        {
+            Debug.Log(Input.GetAxis("Horizontal"));
+            activateRunningAnim = false;
+        } else{
+            activateRunningAnim = true;
         }
     }
 

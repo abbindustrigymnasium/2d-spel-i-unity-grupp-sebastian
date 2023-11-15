@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8622286
+      value: -1.862422
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -402,7 +402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9503458
+      value: -1.862422
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1946,6 +1946,10 @@ PrefabInstance:
     - target: {fileID: 8072103401825594996, guid: e2b7a4568d92e4a4d840cc87c9a4a1e2, type: 3}
       propertyPath: m_Name
       value: platform CP X
+      objectReference: {fileID: 0}
+    - target: {fileID: 8072103401825594996, guid: e2b7a4568d92e4a4d840cc87c9a4a1e2, type: 3}
+      propertyPath: m_TagString
+      value: car
       objectReference: {fileID: 0}
     - target: {fileID: 8476392857949233216, guid: e2b7a4568d92e4a4d840cc87c9a4a1e2, type: 3}
       propertyPath: speed

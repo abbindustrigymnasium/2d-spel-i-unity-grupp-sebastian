@@ -25,6 +25,7 @@ public class Menu : MonoBehaviour
     public void NewGame() {
         player.StartOver();
 
+
     }
 
     public void LoadGame() {
