@@ -47,9 +47,9 @@ MonoBehaviour:
   sounds:
   - clip: {fileID: 8300000, guid: a76264293b700ba4b9ef5c1b03184e61, type: 3}
     name: Theme
-    volume: 0
-    pitch: 0
-    loop: 0
+    volume: 0.524
+    pitch: 1.65
+    loop: 1
     source: {fileID: 0}
   - clip: {fileID: 0}
     name: test
@@ -65,6 +65,30 @@ MonoBehaviour:
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 0e5302d9af4378549adb20b47d921cc8, type: 3}
     name: talking
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 9301188b061dcda4aab6351084728c5c, type: 3}
+    name: ambientSound1
+    volume: 0.549
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b5a1448cf8a42764abf7817b2d2cfd23, type: 3}
+    name: ambientSound2
+    volume: 0.524
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a515cebbac4d49c4dad9e01add440d18, type: 3}
+    name: ambientSound3
+    volume: 1
+    pitch: 1.04
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0aa3ab800d8fc6c44831f7c21f607e21, type: 3}
+    name: death
     volume: 1
     pitch: 1.04
     loop: 0

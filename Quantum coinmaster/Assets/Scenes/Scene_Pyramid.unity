@@ -82080,7 +82080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.475538
+      value: 10.397127
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118394,7 +118394,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b4e779d8ce81ed43befbecff9628b7c, type: 3}
---- !u!1001 &1897653733
+--- !u!1001 &1937885135
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -118404,7 +118404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.475538
+      value: 10.397127
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118444,59 +118444,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 905c32d53a2e58743a2f948c1631b95c, type: 3}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8c88b568f5cd51944b5b196fd2155186, type: 3}
-    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: coinCollect
+      propertyPath: sounds.Array.data[4].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: sounds.Array.data[3].clip
+      propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 0e5302d9af4378549adb20b47d921cc8, type: 3}
+      objectReference: {fileID: 8300000, guid: f7bfce9a66675334781ba572906f5dda, type: 3}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: sounds.Array.data[3].name
-      value: talking
+      propertyPath: sounds.Array.data[5].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a9ebc45a1aab6274697dd0df92ffe23c, type: 3}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[7].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: ambientSound4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 269c9891229c8b541ba07a46a8b7640d, type: 3}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[8].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: ambientSound5
       objectReference: {fileID: 0}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
       value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0.536
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1.04
       objectReference: {fileID: 0}
-    - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.104
       objectReference: {fileID: 0}
-    - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 1
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492110662838789277, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 0.149
       objectReference: {fileID: 0}
     - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.14509805
+      value: 0.047418986
       objectReference: {fileID: 0}
     - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.40392157
+      value: 0.39695513
       objectReference: {fileID: 0}
     - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
+      value: 0.6792453
       objectReference: {fileID: 0}
     - target: {fileID: 8653693910685389994, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_Name
@@ -118572,7 +118600,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1897653733}
   - {fileID: 1168028257}
   - {fileID: 1045243120}
   - {fileID: 672395702}
@@ -118606,3 +118633,4 @@ SceneRoots:
   - {fileID: 1359776740}
   - {fileID: 340411956}
   - {fileID: 1580622002}
+  - {fileID: 1937885135}

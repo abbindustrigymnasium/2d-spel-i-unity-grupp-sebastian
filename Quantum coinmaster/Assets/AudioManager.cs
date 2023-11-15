@@ -47,9 +47,19 @@ public class AudioManager : MonoBehaviour
         }*/
         s.source.Play();
     }
+        public void Stop (string name) {
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+
+        s.source.Stop();
+    }
     void Start()
     {
         Play("Theme");
+        Play("ambientSound1");
+        Play("ambientSound2");
+                Play("ambientSound3");
+                Play("ambientSound4");
+                Play("ambientSound5");
     }
 
     // Update is called once per frame

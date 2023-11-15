@@ -57,7 +57,7 @@ public class KillAndRespawn : MonoBehaviour
     {
 
         rb.bodyType = RigidbodyType2D.Static;
-        
+        FindObjectOfType<AudioManager>().Play("death");
         anim.SetTrigger("death");
 
     }
@@ -66,9 +66,10 @@ public class KillAndRespawn : MonoBehaviour
     {
         objectToActivate.SetActive(true);
         gameManager.pauseGame();
-        
+        FindObjectOfType<AudioManager>().Stop("Theme");
         Debug.Log("Dead");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
 
