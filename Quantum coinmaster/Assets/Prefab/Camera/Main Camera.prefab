@@ -87,7 +87,7 @@ MonoBehaviour:
     pitch: 1.04
     loop: 0
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 0aa3ab800d8fc6c44831f7c21f607e21, type: 3}
+  - clip: {fileID: 8300000, guid: 29b7fdb209e694740b1b429cc19a72b6, type: 3}
     name: death
     volume: 1
     pitch: 1.04
@@ -163,7 +163,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
