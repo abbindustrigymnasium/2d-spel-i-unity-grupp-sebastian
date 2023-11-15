@@ -444,12 +444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.75037
-      value: -721.36237
+      value: -718.9524
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.008702
+      value: -9.088702
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33113,11 +33112,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.75037
+      value: -718.9524
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.008702
+      value: -9.088702
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33412,6 +33411,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c4df34b50b12c82488740aae52d3b617, type: 2}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2129296835}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.data[0]
       value: 'Mind your step, mate! '
@@ -34237,6 +34240,9 @@ MonoBehaviour:
   dialogueText: {fileID: 855962583}
   writingSpeed: 0.015
   player: {fileID: 2129296835}
+  IntroCutscene: {fileID: 0}
+  useIntro: 0
+  chosenIndex: 0
 --- !u!4 &1058406272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7113264776135972388, guid: 84942300140ea1f44b8d964cb5dd6ef9, type: 3}
@@ -35311,11 +35317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -713.2
+      value: -719.49
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.5
+      value: -9.58
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35498,18 +35504,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14203131, y: -0.23671925}
+  m_Offset: {x: -0.013909996, y: -0.10876721}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.8, y: 3.24}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 2.8, y: 3.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3796844, y: 1.2136832}
+  m_Size: {x: 1.0678018, y: 0.95777965}
   m_EdgeRadius: 0
 --- !u!212 &1716346082
 SpriteRenderer:
@@ -35552,7 +35558,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7d993483acf68114a890f8397f18d43c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c1258da74392224db17652bdc32fb9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35572,8 +35578,8 @@ Transform:
   m_GameObject: {fileID: 1716346080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.5, y: 0.47, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 36.2, y: -0.43, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -35857,17 +35863,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 083983b8276323441bf876cd5ef9ebaa, type: 3}
---- !u!114 &2067142270 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
-  m_PrefabInstance: {fileID: 858327913}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec93476560ce2124b877e5293779acd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2091482051
 GameObject:
   m_ObjectHideFlags: 0
@@ -36774,6 +36769,4 @@ SceneRoots:
   - {fileID: 858327913}
   - {fileID: 1110484232}
   - {fileID: 1151706987}
-  - {fileID: 858327913}
-  - {fileID: 128678185}
   - {fileID: 2091482054}

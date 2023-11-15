@@ -202,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2375782
+      value: -4.862422
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6912978
+      value: 1.0912977
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.z
@@ -316,11 +316,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2375782
+      value: -4.862422
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6912978
+      value: 1.0912977
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84623,11 +84623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7305865607634139283, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -85831,7 +85831,7 @@ Transform:
   m_GameObject: {fileID: 1583013306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 161.1, y: -67.45, z: 0}
+  m_LocalPosition: {x: 146, y: -67.45, z: 0}
   m_LocalScale: {x: 3.2606986, y: 2.027004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86955,6 +86955,7 @@ GameObject:
   - component: {fileID: 1980208307}
   - component: {fileID: 1980208306}
   - component: {fileID: 1980208305}
+  - component: {fileID: 1980208308}
   m_Layer: 0
   m_Name: dark moon entrance (1)
   m_TagString: Untagged
@@ -86991,7 +86992,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.4341583, y: 0}
@@ -87068,12 +87069,28 @@ Transform:
   m_GameObject: {fileID: 1980208304}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 147.8, y: -67.45, z: 0}
+  m_LocalPosition: {x: 134.7, y: -67.45, z: 0}
   m_LocalScale: {x: 3.2606986, y: 2.027004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980208308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980208304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9948729c24d22c54695c88d760ee8b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLevel: Scene_Moon2
+  player: {fileID: 1100641335}
+  playerTransform: {fileID: 1100641334}
+  startingPos: {x: 0, y: 0}
 --- !u!1001 &2055139383
 PrefabInstance:
   m_ObjectHideFlags: 0

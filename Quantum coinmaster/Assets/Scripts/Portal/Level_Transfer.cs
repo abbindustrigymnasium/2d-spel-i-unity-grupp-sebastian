@@ -20,10 +20,6 @@ public class NewBehaviourScript : MonoBehaviour
             playerTransform.position = startingPos;
             player.SavePlayer();
             SceneManager.LoadScene(newLevel);
-            
-            
-            
-
         }
 
     }

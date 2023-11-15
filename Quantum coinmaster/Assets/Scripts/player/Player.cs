@@ -83,6 +83,24 @@ Debug.Log(myObj.moonGravityPowerUpOn);
         LoadPlayer();
         
     }
+        public void StartOverPlaying() {
+                Car myObj = new Car();
+        myObj.startingPosX = -722;
+        myObj.startingPosY = -9;
+        myObj.level = "SampleScene";
+        myObj.coins = 0;
+
+
+    myObj.superDrugPowerUpOn = false;
+    myObj.flyingPowerUpOn = false;
+    myObj.invisibilityPowerUpOn = false;
+    myObj.doubleJumpingPowerUpOn = false ;
+    myObj.moonGravityPowerUpOn = false;
+        Save.SaveData(myObj);
+        SceneManager.LoadScene(myObj.level);
+        LoadPlayer();
+        
+    }
 
     public void LoadPlayer() {
         Car data = Save.LoadFile();
