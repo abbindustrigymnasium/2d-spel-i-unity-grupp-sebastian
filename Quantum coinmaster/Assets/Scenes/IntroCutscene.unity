@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.81586
+      value: -710.4
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3085123612728058401, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.81586
+      value: -710.4
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -459,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309048297170536928, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: orthographic size
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8653693910685389994, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_Name
