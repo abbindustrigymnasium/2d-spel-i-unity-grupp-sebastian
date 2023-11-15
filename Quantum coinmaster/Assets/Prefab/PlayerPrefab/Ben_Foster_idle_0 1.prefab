@@ -51,7 +51,6 @@ GameObject:
   - component: {fileID: 8987740185567924316}
   - component: {fileID: 9054591452369101860}
   - component: {fileID: 923876453709842680}
-  - component: {fileID: 8469149157302881943}
   m_Layer: 0
   m_Name: Ben_Foster_idle_0 1
   m_TagString: Player
@@ -69,7 +68,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.2, y: 1.5, z: 0}
-  m_LocalPosition: {x: -722, y: -9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -288,8 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3093905190647170781}
+  play: 1
   powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
-  audio: {fileID: 8469149157302881943}
   test: 8
   groundCheck: {fileID: 3803328229205939496}
   groundLayer:
@@ -485,32 +483,6 @@ MonoBehaviour:
   rb: {fileID: 3093905190647170781}
   lastPosition: {x: 0, y: 0, z: 0}
   isFlying: 0
---- !u!114 &8469149157302881943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409722532995306826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 361d6df2f1eb355468c4d8eee95ef0ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeInTime: 100
-  sounds:
-  - clip: {fileID: 8300000, guid: e0cf1ec46ddb9a0499061f643e3bb542, type: 3}
-    name: jumping1
-    volume: 0.33
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 7fa323d496cfdd64ebfc7c9bc0099a39, type: 3}
-    name: jumping2
-    volume: 0.5
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
 --- !u!1 &4071125046391519043
 GameObject:
   m_ObjectHideFlags: 0

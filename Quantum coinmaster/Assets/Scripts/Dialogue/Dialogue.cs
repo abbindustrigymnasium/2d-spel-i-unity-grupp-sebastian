@@ -140,43 +140,4 @@ public class Dialogue : MonoBehaviour
             source.Play();
         }
     }
-
-        public void FadeOutAudio()
-    {
-
-            StartCoroutine(FadeOut());
-
-    }
-
-    // Coroutine for fading out the audio
-    private System.Collections.IEnumerator FadeOut()
-    {
-        float startVolume = source.volume;
-
-        while (source.volume > 0)
-        {
-            source.volume -= startVolume * Time.deltaTime / fadeOutTime;
-
-            yield return null;
-        }
-
-        // Make sure the volume is set to 0 after fading out
-        source.volume = 0;
-
-        // Stop the audio after fading out
-        source.Stop();
-        source.volume = 1;
-    }
-
-        private void PlayAudioFromRandomPoint()
-    {
-        if (source != null)
-        {
-            // Set the time to a random point within the audio clip length
-            source.time = Random.Range(0, source.clip.length);
-
-            // Play the audio
-            source.Play();
-        }
-    }
 }

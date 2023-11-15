@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5110830936003544911}
   - component: {fileID: 7222492851094133559}
   - component: {fileID: 7102145027203640231}
+  - component: {fileID: 5824237978088302029}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -157,6 +158,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 180285554889069345}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5824237978088302029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180285554889069345}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2368095b5a056b428472739b91f09bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134502272731423197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,6 +2414,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8622193457154771806, guid: aec121bb06c2e3640a274de5dd5fd90b, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4682113776656058493}
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+        m_MethodName: PauseSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

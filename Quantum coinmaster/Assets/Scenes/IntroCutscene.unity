@@ -1157,21 +1157,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1716346086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716346080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d752280a72a8e2740be029dc1a1e78d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineToPlay: {fileID: 1980756018}
-  ScientistAnimator: {fileID: 703584026}
-  portalAnimator: {fileID: 1716346085}
+AudioSource:
+  player: {fileID: 1542882035}
 --- !u!114 &1716346087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,9 +1175,6 @@ MonoBehaviour:
   player: {fileID: 1542882035}
   playerTransform: {fileID: 1542882046}
   startingPos: {x: 0, y: 0}
---- !u!82 &1716346085
-AudioSource:
-  player: {fileID: 1542882035}
 --- !u!1 &1980756017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3409722532995306826, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
