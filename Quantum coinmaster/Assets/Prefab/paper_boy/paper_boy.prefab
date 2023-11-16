@@ -195,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5996986041265279927, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113264776135972388, guid: 507099475078c274c81afa63468188c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -274,6 +274,9 @@ MonoBehaviour:
   dialogueText: {fileID: 6391217316585209185}
   writingSpeed: 0.03
   player: {fileID: -1848727525492962502, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+  IntroCutscene: {fileID: 0}
+  useIntro: 0
+  chosenIndex: 0
   fadeOutTime: 0.1
 --- !u!4 &2121826351968732745 stripped
 Transform:

@@ -13,12 +13,7 @@ public class MenuButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                FindObjectOfType<AudioManager>().Stop("Theme");
-        FindObjectOfType<AudioManager>().Stop("ambientSound1");
-        FindObjectOfType<AudioManager>().Stop("ambientSound2");
-        FindObjectOfType<AudioManager>().Stop("ambientSound3");
-        FindObjectOfType<AudioManager>().Stop("ambientSound4");
-        FindObjectOfType<AudioManager>().Stop("ambientSound5");
+
     }
 
     // Update is called once per frame
@@ -35,12 +30,5 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    public void PauseSound() {
-        FindObjectOfType<AudioManager>().Stop("Theme");
-        FindObjectOfType<AudioManager>().Stop("ambientSound1");
-        FindObjectOfType<AudioManager>().Stop("ambientSound2");
-        FindObjectOfType<AudioManager>().Stop("ambientSound3");
-        FindObjectOfType<AudioManager>().Stop("ambientSound4");
-        FindObjectOfType<AudioManager>().Stop("ambientSound5");
-    }
+
 }

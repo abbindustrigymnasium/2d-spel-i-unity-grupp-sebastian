@@ -60,6 +60,7 @@ public class Dialogue : MonoBehaviour
         waitForNext = false;
         StopAllCoroutines();
         ToggleWindow(false);
+        source.Stop();
     }
     IEnumerator Writing(){
         // current sentence

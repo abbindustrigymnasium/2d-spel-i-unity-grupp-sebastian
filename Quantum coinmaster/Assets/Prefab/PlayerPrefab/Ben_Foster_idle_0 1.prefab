@@ -143,7 +143,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -298,7 +298,7 @@ MonoBehaviour:
   canWalk: 1
   canJump: 1
   speed: 8
-  jumpingPower: 12
+  jumpingPower: 14
   slideSpeed: 2
   regularColl: {fileID: -8934455789690884416}
   slideColl: {fileID: 8052399720377065348}

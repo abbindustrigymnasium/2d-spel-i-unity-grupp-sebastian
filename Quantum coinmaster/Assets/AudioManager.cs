@@ -51,6 +51,20 @@ public class AudioManager : MonoBehaviour
         }*/
         s.source.Play();
     }
+        public void Resume (string name) {
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+        /*if (s == null) {
+            return;
+        }*/
+        s.source.UnPause();
+    }
+            public void Pause (string name) {
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+        /*if (s == null) {
+            return;
+        }*/
+        s.source.Pause();
+    }
         public void Stop (string name) {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
 

@@ -46,7 +46,7 @@ public PowerUps powerUp;
             
         
 
-        
+        FindObjectOfType<AudioManager>().Play("coinCollect");
         Debug.Log("powerUpCollecteds");
         Destroy(gameObject);
     }

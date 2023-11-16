@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8263622047213000195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1238391103351107557, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: removeCode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -730.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513549359949470496, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528403309519862256, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 21e3ea7072d3e2043bd38b1d31ce830c, type: 2}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Size.x
+      value: 74.65924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Size.y
+      value: 24.54012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Offset.x
+      value: 17.06955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Offset.y
+      value: 9.27006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752928016656676285, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226229065787429090, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Name
+      value: Scientist Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456737642511848015, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7738943795ef66e4eaa3b9143e37d169, type: 3}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: useIntro
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: chosenIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: Finally, it's complete.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: The pinnacle of scientific innovation, my time machine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: Behold, the mathematical marvels and physical paradoxes it unveils.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: You see, time is a tapestry, and these coins scattered across its threads
+        hold the key to unlocking the secrets of the ages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: The first lies lost in Edwardian London, awaiting your retrieval.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[5]
+      value: Now, brace yourself for the temporal journey, and remember, it's all
+        about the delicate dance between equations and the enigma of existence.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[6]
+      value: Witness the culmination of my work... it works!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: dialogues.Array.data[7]
+      value: Witness the culmination of my work... it works!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3226229065787429090, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4523175407901329371}
+    - targetCorrespondingSourceObject: {fileID: 6809842160425499275, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7005195424438758610}
+  m_SourcePrefab: {fileID: 100100000, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+--- !u!1 &3183802104713342088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6809842160425499275, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+  m_PrefabInstance: {fileID: 8263622047213000195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7005195424438758610
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183802104713342088}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c93112d3c33eea64daba9686f4804fe5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &6803696888869242593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3226229065787429090, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+  m_PrefabInstance: {fileID: 8263622047213000195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &4523175407901329371
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803696888869242593}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 4afb10846fea81a4f85e8baceef2562c, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []

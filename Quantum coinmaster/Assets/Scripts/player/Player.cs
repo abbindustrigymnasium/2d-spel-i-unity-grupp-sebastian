@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
 
     public void SavePlayer() {
         Car myObj = new Car();
+        Debug.Log(transform.position.x);
         myObj.startingPosX = transform.position.x;
         myObj.startingPosY = transform.position.y;
         myObj.level = SceneManager.GetActiveScene().name;
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
     myObj.doubleJumpingPowerUpOn = powerUps.doubleJumpingPowerUpOn;
     myObj.moonGravityPowerUpOn = powerUps.moonGravityPowerUpOn;
 
-Debug.Log(myObj.moonGravityPowerUpOn);
+
 
         
         Save.SaveData(myObj);
@@ -140,7 +141,6 @@ Debug.Log(myObj.moonGravityPowerUpOn);
             SavePlayer();
             savePlayerNow = false;
         }
-
 
 
     
