@@ -14,6 +14,8 @@ public class Menu : MonoBehaviour
 
     public Car saveData = new Car();
 
+    public GameObject loadingScreen;
+
 
 
     void start()
@@ -23,13 +25,14 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
 
     public void NewGame() {
+          loadingScreen.SetActive(true);
           SceneManager.LoadScene("IntroCutScene");
 
 
     }
 
     public void LoadGame() {
-        
+        loadingScreen.SetActive(true);
         Car data = Save.LoadFile();
         string currentSceneName = data.level;
         SceneManager.LoadScene(currentSceneName);
@@ -46,6 +49,7 @@ public class Menu : MonoBehaviour
     }
     public void mainMenu()
     {
+        loadingScreen.SetActive(true);
         SceneManager.LoadScene(0);
     }
     public void QuitGame()
