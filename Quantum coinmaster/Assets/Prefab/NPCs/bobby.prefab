@@ -121,7 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a598304843e3c41a361e4277524a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   dialogueScript: {fileID: 5110638817688618411}
+  removeCode: 0
 --- !u!61 &3723348878611384455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -283,7 +285,12 @@ MonoBehaviour:
   - Lovely day for a stroll, isn't it?
   - Just be sure to keep to the left and mind the traffic, won't you?
   dialogueText: {fileID: 670562108460524046}
-  writingSpeed: 0.02
+  writingSpeed: 0.015
+  player: {fileID: 0}
+  IntroCutscene: {fileID: 0}
+  useIntro: 0
+  chosenIndex: 0
+  fadeOutTime: 0.1
 --- !u!1 &7160571345914828808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5577239912824985354, guid: 84942300140ea1f44b8d964cb5dd6ef9, type: 3}

@@ -121,7 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a598304843e3c41a361e4277524a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   dialogueScript: {fileID: 1740903356562336840}
+  removeCode: 0
 --- !u!61 &7483007876662306943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -278,7 +280,12 @@ MonoBehaviour:
   - Watch out for that sign overhead, a real bonker for the unwary.
   - Don't want your noggin meeting it before my paint dries!
   dialogueText: {fileID: 1559265594664869100}
-  writingSpeed: 0.02
+  writingSpeed: 0.015
+  player: {fileID: 0}
+  IntroCutscene: {fileID: 0}
+  useIntro: 0
+  chosenIndex: 0
+  fadeOutTime: 0.1
 --- !u!4 &5792623451985864644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7113264776135972388, guid: 84942300140ea1f44b8d964cb5dd6ef9, type: 3}
