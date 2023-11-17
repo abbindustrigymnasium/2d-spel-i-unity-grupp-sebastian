@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: IntroCutscene
       value: 
       objectReference: {fileID: 1716346086}
+    - target: {fileID: 4523175407901329371, guid: ef1aa4b19d1afe946a86c3156e619243, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6803696888869242593, guid: ef1aa4b19d1afe946a86c3156e619243, type: 3}
       propertyPath: m_Name
       value: Scientist Variant
@@ -857,6 +861,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 22c3478d1234f0a4480ec0bb01443ec7, type: 3}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: ambientSound4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 22c3478d1234f0a4480ec0bb01443ec7, type: 3}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[13].name
+      value: AmbientSound5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[12].pitch
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[13].pitch
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219220603143201997, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
+      propertyPath: sounds.Array.data[13].volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4381094112124802298, guid: 266b74406facf2b4b8e688396ed0eae5, type: 3}
       propertyPath: m_Name
       value: Main Camera Variant
@@ -1222,7 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelineToPlay: {fileID: 1980756018}
-  ScientistAnimator: {fileID: 0}
+  ScientistAnimator: {fileID: 251370131}
   portalAnimator: {fileID: 1716346085}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

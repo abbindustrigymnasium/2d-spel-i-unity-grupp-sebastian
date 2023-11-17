@@ -9,6 +9,8 @@ public class BenTimeLine_Lab : MonoBehaviour
     public Animator ScientistAnimator;
     public Animator portalAnimator;
 
+    public AudioSource source;
+
     void Start()
     {
         timelineToPlay = GetComponent<PlayableDirector>();
@@ -18,6 +20,7 @@ public class BenTimeLine_Lab : MonoBehaviour
     }
     public void stayOpen(){
         portalAnimator.SetTrigger("stay");
+        source.Stop();
     }
     public void AnimateScientist()
     {
@@ -30,7 +33,9 @@ public class BenTimeLine_Lab : MonoBehaviour
             timelineToPlay.Play();
         }
     }
-
+    public void playPortalOpen(){
+        source.Play();
+    }
     public void StopTimeline()
     {
         if (timelineToPlay != null)
