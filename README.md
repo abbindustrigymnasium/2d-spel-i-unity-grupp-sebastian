@@ -1,6 +1,16 @@
 # Projekt Unity 2D Spel
 
-Kopierat kod från:
+## För att Spela spelet!
+
+Gå in på Teams, Simon har bjudit in dig (Sofie och Per) till en grupp som heter Spel | Quantum Coinmaster.
+Gå sedan till > För Lärare > Filer > ladda ner den senaste versionen av Version_Open Alpha.
+
+Det kan vara så att man måste unzipa filen. Sedan startar du spelet genom att öppna Quantum Coinmaster.exe! Enjoy!
+
+## Designval
+
+## Kopierat kod från:
+
 Chat GPT,
 https://docs.unity.com/
 
