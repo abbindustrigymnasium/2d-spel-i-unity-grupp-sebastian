@@ -343,6 +343,7 @@ MonoBehaviour:
     startingPosX: -278.3631
     startingPosY: 32.729576
     coins: 1
+    masterVolume: 1
     level: Scene_Moon2
     superDrugPowerUpOn: 1
     flyingPowerUpOn: 1
@@ -362,14 +363,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561b814d3c0b0eb479b4ff7d44d1850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 2
+  Coins: 0
   Level: 0
+  slider: {fileID: 6070572697429251949, guid: 82ab63413b05fe24986d94d2fc6e75f6, type: 3}
   powerUps: {fileID: 4818096244430753340, guid: 2449dee470c416b4f8580723b4cdeda2, type: 3}
   save: {fileID: 8066475573962752676}
   killAndRespawn: {fileID: 8987740185567924316}
   isDead: 0
   savePlayer: 0
   loadPlayer: 0
+  isMenu: 0
   savePlayerNow: 0
 --- !u!70 &-8934455789690884416
 CapsuleCollider2D:

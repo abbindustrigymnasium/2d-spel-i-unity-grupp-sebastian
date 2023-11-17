@@ -16,6 +16,8 @@ public class Car
 
     public int coins = 0;
 
+    public float masterVolume = 1f;
+
     public string level = "SampleScene";
     public bool superDrugPowerUpOn;
     public bool flyingPowerUpOn;

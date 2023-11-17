@@ -13,17 +13,22 @@ public class ChangeVolume : MonoBehaviour
     void Start()
     {
         // Set the initial master volume
-        masterVolume = slider.value;
-        SetMasterVolume(masterVolume);
+        slider.value = AudioListener.volume;
+
     }
 
     // Set the master volume
-    public void SetMasterVolume(float volume)
+    public void SetMasterVolume()
     {
         // Ensure volume is within the valid range (0.0 to 1.0)
-        volume = Mathf.Clamp01(slider.value);
+        float volume = Mathf.Clamp01(slider.value);
+
 
         // Set the master volume using AudioListener
         AudioListener.volume = volume;
+    }
+
+    void update() {
+        masterVolume = Mathf.Clamp01(slider.value);
     }
 }
