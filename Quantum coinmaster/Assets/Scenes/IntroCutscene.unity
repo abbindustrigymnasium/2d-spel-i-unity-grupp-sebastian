@@ -901,11 +901,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: slideSpeed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1015066671188719411, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
       propertyPath: jumpingPower
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071171592530036775, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3409722532995306826, guid: 55e55cda079733b4ca5c85a124b7d6ca, type: 3}
@@ -1470,6 +1478,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7738943795ef66e4eaa3b9143e37d169, type: 3}
+    - target: {fileID: 5582474244025037080, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: useIntro
       value: 1
@@ -1523,6 +1535,10 @@ PrefabInstance:
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: dialogues.Array.data[7]
       value: Witness the culmination of my work... it works!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109455626619809846, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
