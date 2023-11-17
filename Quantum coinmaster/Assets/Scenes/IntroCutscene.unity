@@ -1479,6 +1479,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
+      propertyPath: writingSpeed
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: IntroCutscene
       value: 
       objectReference: {fileID: 1980756030}
