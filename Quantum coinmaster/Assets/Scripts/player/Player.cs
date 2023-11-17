@@ -47,12 +47,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void SavePlayer() {
+    public void SavePlayer(string nextLevel = null) {
         Car myObj = new Car();
         Debug.Log(transform.position.x);
         myObj.startingPosX = transform.position.x;
         myObj.startingPosY = transform.position.y;
         myObj.level = SceneManager.GetActiveScene().name;
+
+        if (nextLevel != null) {
+            myObj.level = nextLevel;
+        }
 
         myObj.coins = Coins;
 

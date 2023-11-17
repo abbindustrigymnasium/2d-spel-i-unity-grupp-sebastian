@@ -18,7 +18,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerTransform.position = startingPos;
-            player.SavePlayer();
+            player.SavePlayer(newLevel);
             
             SceneManager.LoadScene(newLevel);
         }
