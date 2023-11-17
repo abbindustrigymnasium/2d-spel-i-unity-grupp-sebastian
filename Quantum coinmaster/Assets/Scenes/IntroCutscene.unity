@@ -1280,7 +1280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: chosenIndex
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6100345732747880399, guid: 970d84c181746ee43b4f331a4d175569, type: 3}
       propertyPath: IntroCutscene
