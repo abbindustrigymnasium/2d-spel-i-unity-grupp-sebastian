@@ -88193,7 +88193,7 @@ MonoBehaviour:
   newLevel: Scene_Egypt_1
   player: {fileID: 1542882035}
   playerTransform: {fileID: 1092625968}
-  startingPos: {x: -4.5, y: 12.6}
+  startingPos: {x: 0, y: 12.6}
 --- !u!82 &1716346085
 AudioSource:
   m_ObjectHideFlags: 0
