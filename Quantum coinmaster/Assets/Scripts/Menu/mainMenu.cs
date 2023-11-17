@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
 
     public void NewGame() {
-        player.StartOver();
+          SceneManager.LoadScene("IntroCutScene");
 
 
     }

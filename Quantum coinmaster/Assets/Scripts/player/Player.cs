@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
 
     public bool loadPlayer = false;
 
+    public bool isMenu;
+
     public bool savePlayerNow;
     // Start is called before the first frame update
 
@@ -40,8 +42,9 @@ public class Player : MonoBehaviour
             SavePlayer();
             savePlayer = false;
         }
-        LoadPlayer();
-
+        if (!isMenu){
+         LoadPlayer();
+        }
     }
 
     public void SavePlayer() {
