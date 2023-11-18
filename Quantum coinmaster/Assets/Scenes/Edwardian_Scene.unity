@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -721.1575
+      value: -721.1627
       objectReference: {fileID: 0}
     - target: {fileID: 2812142037122429571, guid: 002eb2af03f10d249a0c846dd0710848, type: 3}
       propertyPath: m_LocalPosition.y
@@ -70305,7 +70305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -721.1575
+      value: -721.1627
       objectReference: {fileID: 0}
     - target: {fileID: 5596944916026064065, guid: 640cbf348c2c8274a9578175d22e0802, type: 3}
       propertyPath: m_LocalPosition.y
@@ -88001,15 +88001,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 433b20424a9216c41a52e2c622db8cf7, type: 2}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: 'Greetings, soldier! I''m Victoria Turner, a nurse from London. '
+      value: Your hat doesn't suit your suit!
       objectReference: {fileID: 0}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.data[1]
-      value: 'Ready to patch you up and send you back into the fray:'
+      value: You should go buy a new one emidiatly!!
       objectReference: {fileID: 0}
     - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: dialogues.Array.data[2]
-      value: Just remember, a smile can be as powerful as any weapon on the battlefield."
+      value: Otherwise it would be a shame on our great nation!
       objectReference: {fileID: 0}
     - target: {fileID: 5564159813763831226, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: m_LocalPosition.x
