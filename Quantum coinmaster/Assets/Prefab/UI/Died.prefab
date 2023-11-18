@@ -955,7 +955,7 @@ MonoBehaviour:
     invisibilityPowerUpOn: 0
     doubleJumpingPowerUpOn: 0
     moonGravityPowerUpOn: 0
-  loadingScreen: {fileID: 0}
+  loadingScreen: {fileID: 5971207441438456439, guid: a5e3bdfd587fc1e41b35f9a385cb73a5, type: 3}
 --- !u!114 &1233165965513093520
 MonoBehaviour:
   m_ObjectHideFlags: 0
