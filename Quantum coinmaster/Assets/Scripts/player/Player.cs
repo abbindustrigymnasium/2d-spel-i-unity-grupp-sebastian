@@ -1,16 +1,20 @@
 
+using System.Text;
 using System.Resources;
 using System.Xml.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
 
     public int Coins = 0;
     public int Level = 0;
+
+    public Slider slider;
 
     public PowerUps powerUps;
 
@@ -60,6 +64,9 @@ public class Player : MonoBehaviour
 
         myObj.coins = Coins;
 
+        myObj.masterVolume = AudioListener.volume;
+
+
     myObj.superDrugPowerUpOn = powerUps.superDrugPowerUpOn;
     myObj.flyingPowerUpOn = powerUps.flyingPowerUpOn;
     myObj.invisibilityPowerUpOn = powerUps.invisibilityPowerUpOn;
@@ -80,6 +87,7 @@ public class Player : MonoBehaviour
         myObj.level = "IntroCutScene";
         myObj.coins = 0;
 
+            myObj.masterVolume = AudioListener.volume;
 
     myObj.superDrugPowerUpOn = false;
     myObj.flyingPowerUpOn = false;
@@ -97,6 +105,8 @@ public class Player : MonoBehaviour
         myObj.startingPosY = -9;
         myObj.level = "SampleScene";
         myObj.coins = 0;
+
+         myObj.masterVolume = AudioListener.volume;
 
 
     myObj.superDrugPowerUpOn = false;
@@ -123,6 +133,8 @@ public class Player : MonoBehaviour
     powerUps.invisibilityPowerUpOn = data.invisibilityPowerUpOn;
     powerUps.doubleJumpingPowerUpOn = data.doubleJumpingPowerUpOn;
     powerUps.moonGravityPowerUpOn = data.moonGravityPowerUpOn;
+
+    AudioListener.volume = data.masterVolume;
         
     }
 
