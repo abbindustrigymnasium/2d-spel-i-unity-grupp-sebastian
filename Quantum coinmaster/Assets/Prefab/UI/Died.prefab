@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24528301, g: 0.11685653, b: 0.11685653, a: 0.9882353}
+  m_Color: {r: 0.49056602, g: 0.2702741, b: 0.2702741, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -948,12 +948,14 @@ MonoBehaviour:
     startingPosX: 5
     startingPosY: 100
     coins: 0
+    masterVolume: 1
     level: SampleScene
     superDrugPowerUpOn: 0
     flyingPowerUpOn: 0
     invisibilityPowerUpOn: 0
     doubleJumpingPowerUpOn: 0
     moonGravityPowerUpOn: 0
+  loadingScreen: {fileID: 0}
 --- !u!114 &1233165965513093520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,6 +972,7 @@ MonoBehaviour:
     startingPosX: 5
     startingPosY: 100
     coins: 0
+    masterVolume: 1
     level: SampleScene
     superDrugPowerUpOn: 0
     flyingPowerUpOn: 0
