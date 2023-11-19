@@ -37413,6 +37413,19 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2129296835}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: And I shouldn't tell you this, but since you are such a fine gentelman...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110638817688618411, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
+      propertyPath: dialogues.Array.data[4]
+      value: If you ever get stuck, in prison or underground you can always go to
+        the main menu and load back in!
+      objectReference: {fileID: 0}
     - target: {fileID: 5564159813763831226, guid: ca3fef62ff921204491f4b8a644a783e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -695.21844
