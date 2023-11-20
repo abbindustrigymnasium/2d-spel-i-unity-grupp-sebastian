@@ -84,6 +84,8 @@ pixelart → lätt att förstå. inte så resurskrävande (inga shaders → mind
 
 Man kan spela spelet utan att veta någonting om spelet, eller överhuvud taget veta någonting om några spel.
 
+helt ega texturer. lätt att förstå att man ska använda powerupsen. 
+
 saker att ta med. coins, ui, animation, sprite, alla levlar, lore, powerups, sound design, death, kontrolls, slide.
 
 resdesignes för att få midre olika sprites, lazrarna försvinner efterett tag (bra)
