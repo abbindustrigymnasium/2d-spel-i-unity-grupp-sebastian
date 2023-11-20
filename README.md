@@ -5,7 +5,10 @@ __OBS this repocitory is fully in swedish__
 
 ## Översikt
 
-Quantum Coinmaster är ett underhållande 2D-plattformsspel utvecklat i Unity, där spelaren samlar mynt för att avancera genom olika nivåer och klara spelet.
+Detta projekt är ett skolprojekt som har arbetats på i ca 4-5 veckor, där uppdraget var ett skapa ett 2D spel i unity, med fokus på gränsnitt och änvändarvänlighet.
+
+Vårt spel, Quantum Coinmaster är ett underhållande 2D-plattformsspel utvecklat i Unity, där du som spelare tar rollen som en tidsresande hjälte.Spelet tar sin början när en genial vetenskapsman, under sina experiment för att skapa en portal genom tid och rum, råkar tappa ett antal mystiska mynt i olika tidsepoker. För att återställa balansen i tid och rymd, måste Quantum Coinmaster resa genom fyra unika tider och samla in de förlorade mynten.
+
 
 ## Innehållsförteckning
 
@@ -16,6 +19,8 @@ Quantum Coinmaster är ett underhållande 2D-plattformsspel utvecklat i Unity, d
   - [För att Spela spelet!](#för-att-spela-spelet)
     - [Bidra till projektet](#bidra-till-projektet)
     - [Gör ändringar och commita dem](#gör-ändringar-och-commita-dem)
+  - [Spelet](#spelet)
+    - [Spelupplevelse](#spelupplevelse)
   - [Designval](#designval)
     - [Gränssnitt och Användarvänlighet](#gränssnitt-och-användarvänlighet)
     - [Resursfördelning och Motivering](#resursfördelning-och-motivering)
@@ -40,13 +45,10 @@ Det kan vara så att man måste unzipa filen. Sedan startar du spelet genom att 
 För att kunna bidra tillprojektet måste man komma åt källkoden genom att klona vårat repocitoriet och skapa en egen branch från main om du vill bidra tillprojektet.
 
 ```bash
-# Klona Repot
-git clone https://github.com/ditt-användarnamn/quantum-coinmaster.git
+git clone https://github.com/ditt-användarnamn/quantum-coinmaster.git # Klona Repot
 
-# Skapa en egen Branch
 cd quantum-coinmaster
-git checkout -b din-egen-branch
-
+git checkout -b din-egen-branch  # Skapa en egen Branch
 ```
 
 Öpna sedan projektet i en valfri kodrediskerare, samt i unity för att att se grafik och testa spelet.
@@ -56,17 +58,37 @@ git checkout -b din-egen-branch
 ```bash
 git add .
 git commit -m "Beskrivning av dina ändringar"
-
-# Pusha din branch till GitHub
-git push origin din-egen-branch
-
+git push origin din-egen-branch # Pusha din branch till GitHub
 # Öppna en pull request på GitHub för att föreslå ändringarna
-
 ```
+## Spelet
+
+Din uppgift är att navigera genom fyra distinkta tidsepoker: Edwardian era, Egypten, månen och Cyberpunk. Varje tidsera presenterar sina egna unika utmaningar och fiender som du måste övervinna för att samla in de borttappade mynten. Möt historiska figurer, utforska främmande världar och ställ dig mot futuristiska utmaningar när du reser genom tidens väv.
+
+I början av spelet blir du som spelare presenterad en tutorial för att lära sig hur splet fungerar, nya design element och powerups blir sedan suksesivt tilldelade. Spelet har inge direkta fiender, men världen om kring dig vill konstant ta kol på dig.
+
+### Spelupplevelse
+  - __Plattformsspel__
+- __Fyra Unika Tider__
+- __Powerups:__ Samla kraftfulla powerups som kommer att hjälpa dig övervinna hinder och klara varje nivå snabbare.
+-  __Pixelart Grafik:__ Upplev charmen av pixelart-grafik som ger spelet en unik och nostalgisk estetik.
+-  __Spara Spelet__ spelet har checpoints i for av paper boys där man kan spara spelet och gå tillbaka till det vid en annan tidpunkt.
+
 
 ## Designval
 
 ### Gränssnitt och Användarvänlighet
+
+
+pixelart → lätt att förstå. inte så resurskrävande (inga shaders → mindre resurs) paralax. animationer. lätta kontroller, unities nya input system, tutorial som på ett eknelt sätt visar hur man ska göra. samtidigt som man kan spela under tutorialen och kan köra i sin egent tackt. Det mästa av bakgrounden är statisk p.g.a resurser.
+
+Man kan spela spelet utan att veta någonting om spelet, eller överhuvud taget veta någonting om några spel.
+
+saker att ta med. coins, ui, animation, sprite, alla levlar, lore, powerups, sound design, death, kontrolls, slide.
+
+resdesignes för att få midre olika sprites, lazrarna försvinner efterett tag (bra)
+
+
 
 
 
@@ -155,7 +177,9 @@ Vi har använt följande verktyg och källor i utvecklingen av Quantum Coinmaste
 1.  [__Chat GPT__](https://chat.openai.com/c/1f4196ea-ee94-4880-be12-9dea5411ec90 ) - Använt flr Prototyper av kod, till hjälp med byggfixing
   2. [__Pixaaby__](https://pixabay.com/sound-effects/search/freesounds/) källa för ljud och SFX
 3. [__bing immage creator__](https://www.bing.com/create) Bilder som refernsmatial
-4. [__Youtube__](https://youtube.com/) Tutorial Videor till projektet (se alla videor Här:)
+4. [__Unity Docs__](https://docs.unity.com/) källa för kod till unty
+5. [__stack overflow__](https://stackoverflow.com/) Kod till unity och bugfixes
+6. [__Youtube__](https://youtube.com/) Tutorial Videor till projektet (se alla videor Här:)
    - [The Unity Tutorial For Complete Beginners](https://www.youtube.com/watch?v=XtQMytORBmM&t=700s)
    - [Grunderna till c# spellista](https://www.youtube.com/watch?v=N775KsWQVkw&list=PLPV2KyIb3jR4CtEelGPsmPzlvP7ISPYzR)
    - [Grunderna av unity Spellista](https://www.youtube.com/watch?v=on9nwbZngyw&list=PLPV2KyIb3jR6TFcFuzI2bB7TMNIIBpKMQ)
@@ -184,4 +208,6 @@ Vi har använt följande verktyg och källor i utvecklingen av Quantum Coinmaste
 Denna projekt och dess kod släpps under en öppen källkodslicens, vilket ger alla friheten att använda, ändra och dela innehållet och koden fritt.
 
 ## Kontakt
-kontakta oss visa teams
+kontakta oss visa Teams eller på Mail
+
+[Sebastian Alin](sebastianalin@hitachigymnasiet.se)
