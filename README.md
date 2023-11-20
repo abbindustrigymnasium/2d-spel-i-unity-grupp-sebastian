@@ -205,3 +205,7 @@ Denna projekt och dess kod släpps under en öppen källkodslicens, vilket ger a
 kontakta oss visa Teams eller på Mail
 
 [Sebastian Alin](sebastianalin@hitachigymnasiet.se)
+
+[Viggo Haimanas Bygden](ViggoHaimanas@hitachigymnasiet.se)
+
+[Simon Meier](simonmeier@hitachigymnasiet.se)
