@@ -21,9 +21,9 @@ Vårt spel, Quantum Coinmaster är ett underhållande 2D-plattformsspel utveckla
     - [Gör ändringar och commita dem](#gör-ändringar-och-commita-dem)
   - [Spelet](#spelet)
     - [Spelupplevelse](#spelupplevelse)
-  - [Designval](#designval)
+  - [Designval och Motivering](#designval-och-motivering)
     - [Gränssnitt och Användarvänlighet](#gränssnitt-och-användarvänlighet)
-    - [Resursfördelning och Motivering](#resursfördelning-och-motivering)
+    - [Grafik och Resursfördelning](#grafik-och-resursfördelning)
   - [Tack till](#tack-till)
   - [Verktyg och källor](#verktyg-och-källor)
     - [Verktyg](#verktyg)
@@ -36,7 +36,7 @@ Vårt spel, Quantum Coinmaster är ett underhållande 2D-plattformsspel utveckla
 Gå in på Teams, Simon om du har blivit inbjuden (Sofie och Per) till en grupp som heter Spel | Quantum Coinmaster.
 Gå sedan till > För Lärare > Filer > ladda ner den senaste versionen av Version_Open Alpha.
 
-Om du inte här tillgång till denna länk laddda ner filen från [Google drive](https://drive.google.com/file/d/1b7hWDymEQn4x6fOvgVfYycHfxm64M9vO/view?usp=sharing)
+Om du inte här tillgång till denna länk laddda ner filen från [Google drive](https://drive.google.com/file/d/16vFsVQnBeN-pLbjVgwRQ8COmdG1K-vij/view?usp=sharing)
 
 Det kan vara så att man måste unzipa filen. Sedan startar du spelet genom att öppna Quantum Coinmaster.exe! Enjoy!
 
@@ -75,42 +75,34 @@ I början av spelet blir du som spelare presenterad en tutorial för att lära s
 -  __Spara Spelet__ spelet har checpoints i for av paper boys där man kan spara spelet och gå tillbaka till det vid en annan tidpunkt.
 
 
-## Designval
+## Designval och Motivering
+
+När vi formar ett spel strävar vi efter att göra det så tillgängligt som möjligt för en bred publik. Detta innebär att inte bara skapa ett gränssnitt som är användarvänligt utan också att vara medvetna om resursanvändningen för att säkerställa att spelet kan köras smidigt på alla enheter.
 
 ### Gränssnitt och Användarvänlighet
 
+För att maximera användarvänligheten har vi vidtagit flera åtgärder för att göra spelet lätt att förstå:
 
-pixelart → lätt att förstå. inte så resurskrävande (inga shaders → mindre resurs) paralax. animationer. lätta kontroller, unities nya input system, tutorial som på ett eknelt sätt visar hur man ska göra. samtidigt som man kan spela under tutorialen och kan köra i sin egent tackt. Det mästa av bakgrounden är statisk p.g.a resurser.
+- **Interaktiv Tutorial:** Spelet inleds med en interaktiv tutorial där spelaren gradvis introduceras till nya mekaniker, såsom gående, hoppande, glidande och till slut kombinationen av hopp och glid.
+- **Succesiv Introduktion:** I övriga nivåer introduceras nya spelmekaniker successivt för att undvika överväldigande upplevelser, som exempelvis laserfällorna på månen.
+- **Tydligt GUI:** Vi har implementerat ett tydligt GUI med hög kontrast, lättförståeliga knappar och indikatorer som tydligt visar antalet samlade mynt.
+- **Powerups:** Det är klart och tydligt när spelaren kan använda power-ups, och under nedkylningstiden blir de gråa för att undvika förvirring.
+- **Ljud:** Genom att integrera ljud för hopp, glidande, myntinsamling och användning av power-ups skapas en klarare spelupplevelse.
+- **Dödliga Objekt:** Farliga objekt är lätt identifierbara, och när spelaren dör är det tydligt att de måste börja om från början.
+- **Hög Kontrast:** Exempelvis på månbanan ger hög kontrast mellan den grå marken, den grå bakgrunden och de gröna fienderna en klar visuell förståelse.
 
-Man kan spela spelet utan att veta någonting om spelet, eller överhuvud taget veta någonting om några spel.
+### Grafik och Resursfördelning
 
-helt ega texturer. lätt att förstå att man ska använda powerupsen. 
+Vi har också noggrant övervägt resursfördelningen för att optimera spelets prestanda:
 
-saker att ta med. coins, ui, animation, sprite, alla levlar, lore, powerups, sound design, death, kontrolls, slide.
+- **Pixelart:** Användningen av pixelart ger spelet en minimalistisk estetik samtidigt som det minimerar resurskravet.
+- **Animering:** Huvudkaraktären och vissa NPCs har animerats för att öka visuell tilltalande, men överdriven animering undviks för att bibehålla prestanda.
+- **Statisk Bakgrund:** Mestadels statiska bakgrunder har valts för att prioritera förgrunden och minska belastningen på resurserna.
+- **Parallax-effekter:** Genom att implementera parallax på bakgrunden skapas en illusion av djup och 3D utan att öka belastningen substansiellt.
+- **Scenuppdelning:** Genom att uppdelning i olika scener minskar vi antalet objekt som spelet behöver hantera samtidigt, vilket resulterar i förbättrad prestanda.
+- **Objektdestruktion:** På mån- och Cuberpunk-nivåerna försvinner vissa laserstrålar efter en viss tid för att minska antalet objekt i spelet och därigenom optimera resursanvändningen.
 
-resdesignes för att få midre olika sprites, lazrarna försvinner efterett tag (bra)
 
-
-
-
-
-Spelet har ett intuitivt gränssnitt och fokus på användarvänlighet för att ge spelaren en engagerande upplevelse:
-
-- **Tydligt gränssnitt**: Enkelt och tydligt gränssnitt som ger spelaren nödvändig information utan att överbelasta skärmen.
-
-- **Anpassningsbarhet**: Möjlighet för spelaren att anpassa kontroller och inställningar för en personlig spelupplevelse.
-
-- **Progressionssystem**: Tydlig indikation av framsteg och prestationer för att motivera spelaren.
-
-### Resursfördelning och Motivering
-
-Vi har noggrant övervägt resursfördelningen och vidtagit åtgärder för att optimera spelets prestanda:
-
-- **Texturer och Grafik**: Användning av komprimerade texturer och effektiva grafiska resurser för att minimera filstorleken och laddningstider.
-
-- **Kodoptimering**: Strukturerad och optimerad kod för att säkerställa en smidig körning och minimera minnesanvändning.
-
-- **Ljudresurser**: Effektiv användning av ljudresurser för att balansera ljudkvalitet och filstorlek.
 
 ## Tack till
 
